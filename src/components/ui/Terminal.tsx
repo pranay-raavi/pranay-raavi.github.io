@@ -164,7 +164,7 @@ const commands: Record<string, { desc: string; run: Handler }> = {
       };
       const proj = projects.find((p) => p.slug.includes(t) && p.repo)?.repo;
       const url = map[t] || proj;
-      if (!url) return ctx.print(<Row>{warn("usage: open github|linkedin|email|resume|ai-bot")}</Row>);
+      if (!url) return ctx.print(<Row>{warn("usage: open github|linkedin|email|resume|<project-slug>")}</Row>);
       ctx.print(<Row>{dim("opening ")}{t}{dim(" …")}</Row>);
       ctx.open(url);
     },
@@ -175,7 +175,7 @@ const commands: Record<string, { desc: string; run: Handler }> = {
       const g = ctx.gh;
       ctx.print(<Row>{ok("● all systems operational")}</Row>);
       ctx.print(<Row>{"  portfolio   "}{ok("up")}{dim("  · github pages")}</Row>);
-      ctx.print(<Row>{"  ai-bot      "}{ok("up")}{dim("  · docker/k8s ready")}</Row>);
+      ctx.print(<Row>{"  ai-workspace "}{ok("up")}{dim("  · rag pipeline ready")}</Row>);
       ctx.print(
         <Row>
           {"  github      "}
@@ -196,12 +196,11 @@ const commands: Record<string, { desc: string; run: Handler }> = {
       const sha = "a1b2c3d";
       const steps: [string, string, number][] = [
         [`commit ${sha} pushed to main`, "", 350],
-        ["build · docker image (multi-stage)", "ok", 700],
-        ["test  · 42 passed", "ok", 600],
-        ["scan  · trivy 0 HIGH / 0 CRITICAL", "ok", 550],
-        ["push  · ghcr.io/dhaneshpachipulusu/ai-bot:latest", "ok", 650],
-        ["deploy· kubectl rollout (helm)", "ok", 750],
-        ["health· /health 200 · /metrics 200", "healthy", 500],
+        ["build · next build (static export)", "ok", 700],
+        ["test  · 38 passed", "ok", 600],
+        ["push  · ghcr.io/pranay-raavi/portfolio:latest", "ok", 650],
+        ["deploy· github pages (actions)", "ok", 750],
+        ["health· pranay-raavi.github.io 200", "healthy", 500],
       ];
       ctx.print(<Row>{acc("▶ pipeline started")}{dim("  (github actions)")}</Row>);
       for (const [label, state, ms] of steps) {
@@ -215,7 +214,7 @@ const commands: Record<string, { desc: string; run: Handler }> = {
         );
       }
       await ctx.sleep(300);
-      ctx.print(<Row>{ok("✓ deployed to production")} {dim("· https://dhaneshpachipulusu.github.io")}</Row>);
+      ctx.print(<Row>{ok("✓ deployed to production")} {dim("· https://pranay-raavi.github.io")}</Row>);
     },
   },
   banner: {
@@ -232,7 +231,7 @@ const commands: Record<string, { desc: string; run: Handler }> = {
           {g.live ? <span className="text-fg">{`${g.repos} repos · ${g.stars} stars`}</span> : dim("—")}
         </Row>
       );
-      ctx.print(<Row>{"  stack    "}{dim("Docker · Kubernetes · FastAPI · AWS · CI/CD")}</Row>);
+      ctx.print(<Row>{"  stack    "}{dim("Next.js · React · FastAPI · MongoDB · RAG")}</Row>);
       ctx.print(<Row>{"  status   "}{ok("● operational")}</Row>);
       ctx.print(<Row>{acc("└───────────────────────────────────────────┘")}</Row>);
     },
@@ -400,7 +399,7 @@ export const Terminal = forwardRef<TerminalHandle, { className?: string }>(
           <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
           <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
           <span className="h-3 w-3 rounded-full bg-[#28c840]" />
-          <span className="ml-2 font-mono text-xs text-faint">guest@dhaneswara — zsh</span>
+          <span className="ml-2 font-mono text-xs text-faint">pranay@ai-studio · zsh</span>
           <span className="ml-auto font-mono text-[10px] uppercase tracking-wider text-faint">
             interactive
           </span>

@@ -15,7 +15,7 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-const title = `${profile.name} — Software Developer · Full-Stack Engineer`;
+const title = `${profile.name} — Software Developer · AI Engineer`;
 const description = `${profile.name} — Software Developer building enterprise-grade SaaS and On-Premise systems with Next.js, React.js, FastAPI, MongoDB and REST APIs. Shipped License Management, BuildX Procurement and the AI Decision Workspace (RAG-powered customer support) @ Nainovate Technologies.`;
 
 export const metadata: Metadata = {
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     profile.name,
     "Raavi Pranay",
     "Software Developer",
-    "Full-Stack Engineer",
-    "Frontend Engineer",
+    "Frontend Developer",
+    "AI Engineer",
     "Backend Engineer",
     "AI Applications Engineer",
     "Next.js",
@@ -80,7 +80,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: profile.name,
-  jobTitle: "Software Developer, Full-Stack Engineer, AI Applications Engineer",
+  jobTitle: "Software Developer, Frontend Developer, AI Engineer",
   description,
   url: profile.siteUrl,
   email: profile.email,

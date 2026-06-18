@@ -38,8 +38,8 @@ export const profile = {
   name: "Raavi Pranay",
   monogram: "RP",
   primaryRole: "Software Developer",
-  secondaryRoles: ["Full-Stack Engineer", "AI Applications Engineer"],
-  roles: ["Software Developer", "Full-Stack Engineer", "AI Applications Engineer"],
+  secondaryRoles: ["Frontend Developer", "AI Engineer"],
+  roles: ["Software Developer", "Frontend Developer", "AI Engineer"],
   atCompany: "Software Developer @ Nainovate Technologies",
   impact:
     "Building enterprise-grade SaaS and On-Premise systems — license management, procurement automation and AI-driven workflow platforms with Next.js, React, FastAPI and MongoDB.",
@@ -103,6 +103,21 @@ export interface TermGroup {
 
 export const terminalGroups: TermGroup[] = [
   {
+    cmd: "ai-workspace init --env production",
+    lines: [
+      { label: "KB embeddings loaded", value: "1,842 vectors", ok: true },
+      { label: "RAG pipeline ready", value: "94% accuracy", ok: true },
+    ],
+  },
+  {
+    cmd: "query --ticket TKT-4821 --kb freshdesk",
+    lines: [
+      { label: "ticket context fetched", value: "0.08s", ok: true },
+      { label: "KB documents retrieved", value: "3 docs", ok: true },
+      { label: "grounded answer generated", ok: true },
+    ],
+  },
+  {
     cmd: "npm run dev",
     lines: [
       { label: "Next.js 16 ready", value: "localhost:3000", ok: true },
@@ -110,31 +125,16 @@ export const terminalGroups: TermGroup[] = [
     ],
   },
   {
-    cmd: "uvicorn app.main:app",
+    cmd: "uvicorn app.main:app --reload",
     lines: [
       { label: "FastAPI started", value: "0.0.0.0:8000", ok: true },
       { label: "MongoDB connected", ok: true },
     ],
   },
   {
-    cmd: "license-service status",
+    cmd: "pytest tests/ -q",
     lines: [
-      { label: "SaaS tenant validated", ok: true },
-      { label: "On-Prem key issued", ok: true },
-    ],
-  },
-  {
-    cmd: "rag query --kb freshdesk",
-    lines: [
-      { label: "Embeddings retrieved", ok: true },
-      { label: "Grounded answer generated", ok: true },
-    ],
-  },
-  {
-    cmd: "pytest tests/",
-    lines: [
-      { label: "API tests passed", ok: true },
-      { label: "Integration suite green", ok: true },
+      { label: "38 passed", value: "0 failed", ok: true },
     ],
   },
 ];
