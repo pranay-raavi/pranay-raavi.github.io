@@ -52,7 +52,7 @@ export function Hero() {
               <span className="text-gradient">{profile.name}</span>
             </motion.h1>
 
-            {/* role hierarchy — DevOps dominant */}
+            {/* role hierarchy — primary role dominant */}
             <motion.div {...fade(0.13)} className="mt-5">
               <div className="flex items-baseline gap-3">
                 <span className="text-3xl font-bold tracking-tight text-gradient-accent sm:text-4xl">

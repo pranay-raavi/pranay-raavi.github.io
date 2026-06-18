@@ -25,6 +25,9 @@ import {
   Brain,
   Search,
   Webhook,
+  FileText,
+  KeyRound,
+  ShoppingCart,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -32,38 +35,37 @@ import {
 /* ------------------------------------------------------------------ */
 
 export const profile = {
-  name: "Dhaneswara Rao Pachipulusu",
-  monogram: "DP",
-  primaryRole: "DevOps Engineer",
-  secondaryRoles: ["Backend Engineer", "AI Applications Engineer"],
-  roles: ["DevOps Engineer", "Backend Engineer", "AI Applications Engineer"],
-  atCompany: "Backend Engineer & DevOps Engineer @ Nainovate AI",
+  name: "Raavi Pranay",
+  monogram: "RP",
+  primaryRole: "Software Developer",
+  secondaryRoles: ["Full-Stack Engineer", "AI Applications Engineer"],
+  roles: ["Software Developer", "Full-Stack Engineer", "AI Applications Engineer"],
+  atCompany: "Software Developer @ Nainovate Technologies",
   impact:
-    "Designing, deploying, and scaling production systems on AWS and Kubernetes while building backend services and AI-powered applications.",
+    "Building enterprise-grade SaaS and On-Premise systems — license management, procurement automation and AI-driven workflow platforms with Next.js, React, FastAPI and MongoDB.",
   tagline:
-    "Designing, deploying, and scaling production systems on AWS and Kubernetes while building backend services and AI-powered applications.",
+    "Building enterprise-grade SaaS and On-Premise systems — license management, procurement automation and AI-driven workflow platforms with Next.js, React, FastAPI and MongoDB.",
   shortBio:
-    "DevOps & Backend Engineer who designs, deploys, scales, monitors, secures, and operates production systems end-to-end.",
-  location: "India",
-  email: "nainovate@gmail.com",
+    "Software Developer building full-stack SaaS and On-Premise platforms — frontends in Next.js & React, backends in FastAPI, integrated with RAG-powered AI workflows.",
+  location: "Vijayawada, Andhra Pradesh",
+  email: "pranayraavi23@gmail.com",
   resumeUrl: "/resume.pdf",
   socials: {
-    github: "https://github.com/DhaneshPachipulusu",
-    // TODO: replace with your real LinkedIn URL
-    linkedin: "https://www.linkedin.com/in/dhaneswara-rao-pachipulusu",
-    email: "mailto:nainovate@gmail.com",
+    github: "https://github.com/pranay-raavi",
+    linkedin: "https://www.linkedin.com/in/raavi-pranay",
+    email: "mailto:pranayraavi23@gmail.com",
   },
-  siteUrl: "https://dhaneshpachipulusu.github.io",
+  siteUrl: "https://pranay-raavi.github.io",
 };
 
 export type Role = (typeof profile.roles)[number];
 
 /* Recruiter trust indicators — first impression */
 export const trustIndicators: string[] = [
-  "Production Deployments",
-  "Kubernetes Experience",
-  "AWS Cloud Infrastructure",
-  "AI Product Development",
+  "1+ Year Industry Experience",
+  "SaaS & On-Prem Deployments",
+  "Full-Stack Next.js + FastAPI",
+  "AI / RAG Product Development",
 ];
 
 /* ------------------------------------------------------------------ */
@@ -80,9 +82,9 @@ export interface Stat {
 
 export const stats: Stat[] = [
   { label: "Years Experience", value: 1, suffix: "+", icon: Activity },
-  { label: "Production Deployments", value: 10, suffix: "+", icon: Rocket },
-  { label: "AI Products Built", value: 3, suffix: "+", icon: Bot },
-  { label: "CI/CD Automation", value: 100, suffix: "%", icon: Workflow },
+  { label: "Enterprise Products Shipped", value: 3, suffix: "+", icon: Rocket },
+  { label: "AI Modules Built", value: 3, suffix: "+", icon: Bot },
+  { label: "REST APIs Integrated", value: 30, suffix: "+", icon: Workflow },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -101,37 +103,38 @@ export interface TermGroup {
 
 export const terminalGroups: TermGroup[] = [
   {
-    cmd: "kubectl get pods",
+    cmd: "npm run dev",
     lines: [
-      { label: "api-prod-6df7", value: "Running", ok: true },
-      { label: "worker-prod-8a12", value: "Running", ok: true },
+      { label: "Next.js 16 ready", value: "localhost:3000", ok: true },
+      { label: "Compiled /app", ok: true },
     ],
   },
   {
-    cmd: "helm upgrade platform-prod",
-    lines: [{ label: "Deployment successful", ok: true }],
-  },
-  {
-    cmd: "gh workflow run deploy.yml",
+    cmd: "uvicorn app.main:app",
     lines: [
-      { label: "Build passed", ok: true },
-      { label: "Tests passed", ok: true },
-      { label: "Deploy passed", ok: true },
+      { label: "FastAPI started", value: "0.0.0.0:8000", ok: true },
+      { label: "MongoDB connected", ok: true },
     ],
   },
   {
-    cmd: "monitoring status",
+    cmd: "license-service status",
     lines: [
-      { label: "Prometheus healthy", ok: true },
-      { label: "Grafana healthy", ok: true },
+      { label: "SaaS tenant validated", ok: true },
+      { label: "On-Prem key issued", ok: true },
     ],
   },
   {
-    cmd: "aws infrastructure",
+    cmd: "rag query --kb freshdesk",
     lines: [
-      { label: "CloudFront active", ok: true },
-      { label: "EC2 running", ok: true },
-      { label: "SSL valid", ok: true },
+      { label: "Embeddings retrieved", ok: true },
+      { label: "Grounded answer generated", ok: true },
+    ],
+  },
+  {
+    cmd: "pytest tests/",
+    lines: [
+      { label: "API tests passed", ok: true },
+      { label: "Integration suite green", ok: true },
     ],
   },
 ];
@@ -148,40 +151,40 @@ export interface Highlight {
 
 export const aboutHighlights: Highlight[] = [
   {
-    title: "Cloud Engineering",
+    title: "Frontend Engineering",
     description:
-      "Design and operate AWS infrastructure — EC2, S3, CloudFront, Route53, VPC — built for scale, cost, and resilience.",
-    icon: Cloud,
+      "Production UI modules with Next.js 16, React and TypeScript — fast, accessible and component-driven.",
+    icon: Code2,
   },
   {
-    title: "DevOps & Automation",
+    title: "Backend Development",
     description:
-      "CI/CD pipelines, containerized workloads on Docker & Kubernetes, and infrastructure automation that ships safely.",
-    icon: Workflow,
-  },
-  {
-    title: "Backend Systems",
-    description:
-      "High-performance APIs with FastAPI, Node.js & Python backed by MongoDB, MySQL and Redis caching layers.",
+      "FastAPI services, REST APIs and MongoDB schemas designed for SaaS and On-Premise enterprise workloads.",
     icon: Server,
   },
   {
-    title: "Observability",
+    title: "License & Entitlement Systems",
     description:
-      "Prometheus metrics and Grafana dashboards for monitoring, alerting and real-time system insight.",
-    icon: Activity,
-  },
-  {
-    title: "Security & Reliability",
-    description:
-      "Least-privilege access, SSL, secrets hygiene and self-healing systems engineered to stay up under load.",
-    icon: ShieldCheck,
+      "End-to-end license management — customer onboarding, product key assignment, deployment validation for SaaS & On-Prem.",
+    icon: KeyRound,
   },
   {
     title: "AI Integrations",
     description:
-      "Production RAG pipelines and LLM features with OpenAI, Gemini and vector search — as a supporting capability.",
+      "RAG pipelines, semantic search and context-aware AI responses wired into real product workflows.",
     icon: Brain,
+  },
+  {
+    title: "Procurement & Workflow Automation",
+    description:
+      "Built RFP creation, bid management and PDF generation modules that automate enterprise procurement.",
+    icon: Workflow,
+  },
+  {
+    title: "API Design & Integration",
+    description:
+      "Clean REST contracts, Postman documentation and reliable frontend-backend integration across every product I ship.",
+    icon: Network,
   },
 ];
 
@@ -199,43 +202,43 @@ export interface BuildItem {
 
 export const whatIBuild: BuildItem[] = [
   {
-    title: "Cloud Infrastructure",
+    title: "Full-Stack Web Apps",
     description:
-      "Provision and operate AWS environments built for scale, cost-efficiency and resilience.",
-    icon: Cloud,
-    items: ["EC2 · S3 · EBS", "CloudFront · Route53", "VPC networking", "SSL & DNS"],
+      "Next.js + React frontends and FastAPI backends with real-time data flow and clean integrations.",
+    icon: Code2,
+    items: ["Next.js · React.js", "TypeScript · Tailwind", "FastAPI · REST APIs", "MongoDB · PostgreSQL"],
     accent: "#38bdf8",
   },
   {
-    title: "Backend Platforms",
+    title: "License Management Systems",
     description:
-      "High-performance APIs and services with clean architecture and reliable data layers.",
-    icon: Server,
-    items: ["FastAPI · Node.js", "REST APIs", "MongoDB · MySQL", "Redis caching"],
+      "SaaS & On-Premise license workflows — onboarding, product keys, deployment validation and entitlement logic.",
+    icon: KeyRound,
+    items: ["Customer onboarding", "Product key assignment", "SaaS + On-Prem flows", "Environment-aware config"],
     accent: "#818cf8",
-  },
-  {
-    title: "DevOps Automation",
-    description:
-      "Containerized delivery and CI/CD pipelines that turn commits into safe production releases.",
-    icon: Workflow,
-    items: ["Docker · Kubernetes", "GitHub Actions · Jenkins", "Nginx · Linux", "Zero-downtime deploys"],
-    accent: "#22d3ee",
   },
   {
     title: "AI-Powered Applications",
     description:
-      "RAG pipelines and LLM features integrated into production products as a supporting capability.",
+      "RAG pipelines and AI assistants integrated with knowledge bases and ticketing systems for contextual answers.",
     icon: Brain,
-    items: ["RAG pipelines", "OpenAI · Gemini", "Qdrant vector search", "AI agents"],
+    items: ["RAG pipelines", "Semantic search", "Freshdesk KB integration", "Context-aware responses"],
     accent: "#f472b6",
   },
   {
-    title: "Internal Engineering Tools",
+    title: "Procurement Platforms",
     description:
-      "Dashboards, automation and developer tooling that remove operational toil.",
-    icon: Wrench,
-    items: ["Ops automation", "Monitoring dashboards", "Deploy tooling", "Scripts & CLIs"],
+      "Backend services for RFP creation, bid management, PDF generation and AI-driven procurement automation.",
+    icon: ShoppingCart,
+    items: ["RFP automation", "Bid management", "PDF generation", "AI-generated RFPs"],
+    accent: "#22d3ee",
+  },
+  {
+    title: "Reusable UI Components",
+    description:
+      "Component libraries, mock-data-driven interfaces and dashboards that scale across enterprise products.",
+    icon: Layers,
+    items: ["Design-system components", "Dashboard visualizations", "Workflow UIs", "Mock-data scaffolding"],
     accent: "#34d399",
   },
 ];
@@ -256,34 +259,36 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
-    company: "Nainovate AI",
-    role: "Backend Engineer & DevOps Engineer",
-    period: "July 2025 — Present",
+    company: "Nainovate Technologies Pvt Ltd",
+    role: "Software Developer",
+    period: "2025 — 2026",
     current: true,
     summary:
-      "Own the full path to production across Backend, DevOps, Cloud and AI — from architecture and deployment to monitoring and reliability.",
+      "Building enterprise-grade SaaS and On-Premise systems across License Management, AI-driven procurement and intelligent workflow platforms.",
     highlights: [
-      "Built AI-powered customer support platforms serving production traffic",
-      "Implemented RAG pipelines for enterprise knowledge retrieval over private data",
-      "Managed cloud infrastructure and production deployments on AWS",
-      "Built automated CI/CD pipelines for safe, repeatable releases",
-      "Implemented Kubernetes-based deployment workflows with scaling and self-healing",
-      "Integrated monitoring and observability using Prometheus and Grafana",
-      "Worked across Backend, DevOps, Cloud and AI systems end-to-end",
+      "Designed and shipped a complete License Management System for the company's AI automation platform",
+      "Built Next.js frontend modules for customer onboarding, product key assignment and license generation",
+      "Implemented SaaS and On-Premise license workflows with environment-aware configuration and deployment validation",
+      "Built FastAPI backends for the BuildX procurement platform — RFP creation, bid management and PDF generation",
+      "Designed and optimized MongoDB schemas with proper indexing for high-throughput procurement data",
+      "Developed AI-powered Next.js modules for the AI Decision Workspace with an assistant that grounds on Freshdesk tickets and the KB",
+      "Worked on RAG pipeline concepts — semantic search, document retrieval and context-aware AI responses",
+      "Built reusable UI components, dashboards and mock-data-driven interfaces for scalable frontend development",
     ],
-    tags: ["AWS", "Kubernetes", "Docker", "CI/CD", "FastAPI", "Prometheus", "Grafana", "RAG"],
+    tags: ["Next.js", "React", "FastAPI", "MongoDB", "REST APIs", "RAG", "Postman", "SaaS", "On-Prem"],
   },
   {
-    company: "Tata Consultancy Services (TCS)",
-    role: "Digital — System Engineer (Offer)",
-    period: "2025",
+    company: "Karunya Institute of Technology and Sciences",
+    role: "B.Tech — Computer Science and Engineering",
+    period: "Graduated May 2025",
     summary:
-      "Earned the premium TCS Digital System Engineer offer — recognition reserved for top-tier engineering talent.",
+      "B.Tech in Computer Science and Engineering with a focus on software engineering, data structures and machine learning.",
     highlights: [
-      "Cleared the TCS National Qualifier for the premium Digital track",
-      "Offered the System Engineer role focused on modern engineering and cloud",
+      "Graduated May 2025 with CGPA 6.62",
+      "Built ML projects on EV range prediction and AI-powered rootkit detection",
+      "Certifications: Google Data Analytics · Microsoft Azure Data Fundamentals · NPTEL Industry 4.0",
     ],
-    tags: ["Achievement", "System Engineer"],
+    tags: ["B.Tech CSE", "ML", "Data Analytics", "Azure"],
   },
 ];
 
@@ -291,7 +296,7 @@ export const experience: ExperienceItem[] = [
 /* Projects (engineering case studies)                                */
 /* ------------------------------------------------------------------ */
 
-export type ProjectCategory = "AI" | "Backend" | "DevOps" | "Platform";
+export type ProjectCategory = "AI" | "Backend" | "Frontend" | "Platform";
 
 export interface Project {
   slug: string;
@@ -318,149 +323,224 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "ai-interview-bot",
-    title: "AI Interview Bot",
-    tagline: "Automated technical interviews & resume scoring — shipped with a full Docker → Kubernetes CI/CD pipeline.",
-    categories: ["DevOps", "Backend", "AI", "Platform"],
-    icon: Bot,
-    accent: "#38bdf8",
-    problem:
-      "Hiring teams spend hours screening resumes and running first-round interviews. The goal: an automated system that scores resumes, runs adaptive AI interviews and produces structured candidate reports — packaged so it can actually ship to production, not just run on localhost.",
-    features: [
-      "Resume scoring & analysis",
-      "Adaptive AI-driven interviews",
-      "Structured candidate reports",
-      "Learning notes & job recommendations",
-      "Next.js dashboard UI",
-      "Containerized & production-ready",
-    ],
-    architecture: [
-      "FastAPI backend orchestrating interview sessions and scoring",
-      "Google Gemini + OpenAI for question generation & evaluation",
-      "SQLite + JSON document store for sessions, reports and parsed resumes",
-      "Next.js frontend served as a standalone container",
-      "Nginx reverse proxy with SSL in front of the services",
-    ],
-    stack: ["FastAPI", "Python", "Next.js", "Google Gemini", "OpenAI", "SQLite", "Docker", "Kubernetes", "Helm", "Terraform", "GitHub Actions", "Prometheus", "Grafana", "Nginx"],
-    challenges:
-      "Taking a working app from localhost to a reproducible, observable production deployment — the whole delivery pipeline, not just the AI.",
-    solution:
-      "Multi-stage Docker images for backend and frontend, a GitHub Actions pipeline (build → test → Trivy scan → push to GHCR), Kubernetes manifests via kustomize plus a Helm chart, Terraform for infrastructure, and Prometheus/Grafana wired to a /metrics endpoint.",
-    deployment: [
-      "Multi-stage Docker images pushed to GHCR via GitHub Actions (with Trivy scan)",
-      "Kubernetes deploy via kustomize + a Helm chart (HPA, probes, secrets)",
-      "Terraform for infrastructure as code; Nginx + SSL at the edge",
-      "Prometheus scraping /metrics, visualized in Grafana",
-    ],
-    results: [
-      "Runs fully containerized — backend & frontend verified healthy",
-      "One-command local stack via docker compose",
-      "Reproducible, observable, production-style delivery",
-    ],
-    metrics: [
-      { label: "Delivery", value: "CI/CD" },
-      { label: "Orchestration", value: "K8s + Helm" },
-      { label: "Monitoring", value: "Prom + Grafana" },
-    ],
-    repo: "https://github.com/DhaneshPachipulusu/ai-bot",
-    status: { label: "Public · source on GitHub", tone: "source" },
-  },
-  {
-    slug: "jarvis-ai-assistant",
-    title: "Jarvis — AI Voice Assistant",
-    tagline: "Offline, wake-word voice assistant for Windows, powered by Google Gemini.",
-    categories: ["AI", "Backend"],
-    icon: Sparkles,
-    accent: "#818cf8",
-    problem:
-      "Routine desktop tasks and quick lookups constantly break focus. The goal: a hands-free, wake-word voice assistant that runs locally on Windows, holds natural conversations and automates everyday actions.",
-    features: [
-      "Offline wake-word detection",
-      "Voice commands & speech I/O",
-      "Natural conversations via Google Gemini",
-      "Windows software automation",
-      "Productivity shortcuts",
-      "Local-first, privacy-friendly",
-    ],
-    architecture: [
-      "Python core with a wake-word listener and intent router",
-      "Offline speech-to-text + text-to-speech pipeline",
-      "Google Gemini conversation layer with context memory",
-      "Automation modules for Windows apps, files and system actions",
-    ],
-    stack: ["Python", "Google Gemini", "Speech I/O", "Windows", "Automation"],
-    challenges:
-      "Reliable offline wake-word detection and low-latency voice interaction without a constant network round-trip.",
-    solution:
-      "Ran wake-word detection locally, streamed Gemini responses, and debounced audio input with a graceful fallback when intent confidence was low.",
-    deployment: [
-      "Runs as a local app on Windows",
-      "Modular skill registry for adding new commands",
-    ],
-    results: [
-      "Hands-free control of common Windows workflows",
-      "Extensible skill/command architecture",
-      "Natural, context-aware conversations",
-    ],
-    metrics: [
-      { label: "Runs", value: "Offline" },
-      { label: "Platform", value: "Windows" },
-      { label: "LLM", value: "Gemini" },
-    ],
-    repo: "https://github.com/DhaneshPachipulusu/Jarvis",
-    status: { label: "Public · source on GitHub", tone: "source" },
-  },
-  {
-    slug: "ai-customer-support",
-    title: "AI Customer Support Platform",
-    tagline: "Multi-tenant RAG support platform with an AI copilot for agents.",
-    categories: ["AI", "Backend", "DevOps", "Platform"],
+    slug: "ai-decision-workspace",
+    title: "AI Decision Workspace",
+    tagline: "AI-powered customer-support workspace with a Freshdesk-grounded assistant and RAG-driven contextual answers.",
+    categories: ["AI", "Frontend", "Backend", "Platform"],
     icon: Webhook,
     accent: "#22d3ee",
     problem:
-      "Support teams drown in repetitive tickets and scattered knowledge. The goal: a multi-tenant platform that answers from a company's own knowledge base and gives human agents an AI copilot.",
+      "Support agents juggle Freshdesk tickets, scattered knowledge base docs and disconnected internal tools. The goal: an enterprise workspace where an AI assistant reads ticket context, retrieves the right KB documents and produces grounded, agent-ready responses.",
     features: [
-      "Retrieval-Augmented Generation (RAG)",
-      "Knowledge base semantic search",
-      "Ticket intelligence & routing",
-      "AI copilot for agents",
-      "Support automation",
-      "Multi-tenant architecture",
+      "AI assistant grounded on Freshdesk tickets, KB docs and agent context",
+      "Retrieval-Augmented Generation (RAG) pipeline with semantic search",
+      "Dynamic AI search and workflow execution UI",
+      "Dashboard visualizations for support operations",
+      "Reusable, mock-data-driven UI components",
+      "Real-time frontend-backend communication for AI responses",
     ],
     architecture: [
-      "FastAPI services per tenant with isolated data boundaries",
-      "Ingestion → chunking → embeddings → Qdrant vector DB",
-      "RAG query flow with re-ranking and grounded LLM answers",
-      "Redis for caching hot retrievals and sessions",
-      "Kubernetes deployment with Prometheus/Grafana monitoring",
+      "Next.js + React frontend with modular AI workspace components",
+      "REST APIs for ticket ingestion, KB document retrieval and agent context",
+      "RAG flow: ingest → chunk → embed → semantic retrieve → grounded LLM answer",
+      "Backend orchestration that fuses Freshdesk ticket data with KB context",
+      "Optimized frontend-backend integration for low-latency AI interactions",
     ],
-    stack: ["FastAPI", "RAG", "Qdrant", "Redis", "Kubernetes", "Prometheus", "Grafana", "AWS"],
+    stack: ["Next.js", "React.js", "TypeScript", "FastAPI", "REST APIs", "RAG", "Semantic Search", "MongoDB"],
     challenges:
-      "Strict per-tenant data isolation while keeping retrieval fast and the platform horizontally scalable.",
+      "Grounding the LLM strictly in customer-specific Freshdesk and KB content while keeping the agent UI responsive in real time.",
     solution:
-      "Namespaced vector collections per tenant, per-tenant auth boundaries, Redis caching for hot paths, and Kubernetes-driven horizontal scaling.",
+      "Built a retrieval pipeline that pulls ticket + KB context per query, fed it into an LLM with grounding instructions, and streamed responses into the workspace UI with reusable, mock-data-driven components for fast iteration.",
     deployment: [
-      "Containerized services deployed to Kubernetes",
-      "CI/CD pipeline with automated rollout and rollback",
-      "Prometheus + Grafana for monitoring and alerting",
+      "Deployed as an internal enterprise SaaS module",
+      "REST API contracts for Freshdesk + KB integration",
+      "Reusable component library powering AI search, workflow and dashboard pages",
     ],
     results: [
-      "Deflected repetitive tickets with grounded answers",
-      "Faster agent resolution via the AI copilot",
-      "Horizontally scalable, observable platform",
+      "Agents get contextual, KB-grounded responses inline with tickets",
+      "Workflow execution and AI search unified in a single workspace",
+      "Scalable frontend architecture built on reusable components",
     ],
     metrics: [
-      { label: "Tenancy", value: "Multi-tenant" },
-      { label: "Scaling", value: "Horizontal" },
-      { label: "Observability", value: "Full-stack" },
+      { label: "AI Pattern", value: "RAG" },
+      { label: "Integration", value: "Freshdesk + KB" },
+      { label: "Frontend", value: "Next.js + React" },
     ],
-    status: { label: "Private · built at Nainovate AI", tone: "private" },
+    status: { label: "Private · built at Nainovate Technologies", tone: "private" },
+  },
+  {
+    slug: "license-management-service",
+    title: "License Management Service",
+    tagline: "End-to-end License Management for an enterprise AI automation platform — SaaS & On-Premise deployments.",
+    categories: ["Frontend", "Backend", "Platform"],
+    icon: KeyRound,
+    accent: "#818cf8",
+    problem:
+      "An enterprise AI automation platform needed a single license layer that worked for both SaaS tenants and On-Premise customers — covering onboarding, product key assignment, generation and deployment validation.",
+    features: [
+      "Customer onboarding flows",
+      "Product key assignment and license generation",
+      "SaaS + On-Premise deployment models",
+      "Environment-aware license configuration",
+      "Deployment validation logic",
+      "Integration with the company's Automation Workflow and Personalized AI platform",
+    ],
+    architecture: [
+      "Next.js frontend UI modules for onboarding, keys and licenses",
+      "Backend services for license issuance, validation and lifecycle management",
+      "Environment-aware config layer that swaps SaaS vs On-Prem behavior",
+      "Integration hooks into the Automation Workflow and Personalized AI platform",
+    ],
+    stack: ["Next.js", "React.js", "TypeScript", "FastAPI", "Python", "MongoDB", "REST APIs"],
+    challenges:
+      "Designing a single license model that cleanly supports both SaaS multi-tenant and On-Premise air-gapped deployments without duplicating logic.",
+    solution:
+      "Centralized the license schema and validation logic, then layered environment-aware configuration so the same service powered both SaaS provisioning and On-Prem key issuance.",
+    deployment: [
+      "Shipped to enterprise customers as both SaaS and On-Premise installs",
+      "Integrated with the parent Automation Workflow product",
+      "Deployment validation enforced at install time",
+    ],
+    results: [
+      "Single source of truth for licensing across both deployment models",
+      "Faster customer onboarding through automated key issuance",
+      "Reliable deployment validation reducing install-time issues",
+    ],
+    metrics: [
+      { label: "Models", value: "SaaS + On-Prem" },
+      { label: "Scope", value: "Full-Stack" },
+      { label: "Integration", value: "Automation Platform" },
+    ],
+    status: { label: "Private · built at Nainovate Technologies", tone: "private" },
+  },
+  {
+    slug: "buildx-procurement",
+    title: "BuildX Procurement Platform",
+    tagline: "FastAPI backend powering RFP creation, bid management and AI-driven procurement automation.",
+    categories: ["Backend", "AI", "Platform"],
+    icon: ShoppingCart,
+    accent: "#38bdf8",
+    problem:
+      "Procurement teams handle RFPs, vendor bids and document generation across disconnected tools. The goal: a backend platform that automates RFP creation, manages bids and uses AI to draft procurement documents.",
+    features: [
+      "RFP creation and lifecycle management",
+      "Bid management and vendor workflows",
+      "AI-driven RFP generation",
+      "PDF document generation",
+      "REST APIs with Postman documentation",
+      "React-based frontend integration for dynamic rendering",
+    ],
+    architecture: [
+      "FastAPI services for RFP, bid and procurement workflows",
+      "MongoDB schemas with proper indexing for efficient data access",
+      "PDF generation module for procurement documents",
+      "AI module for drafting RFP content from structured inputs",
+      "React frontend wired to REST APIs for dynamic rendering",
+    ],
+    stack: ["Python", "FastAPI", "MongoDB", "REST APIs", "React.js", "Postman", "PDF Generation"],
+    challenges:
+      "Modeling RFPs and bids cleanly while keeping queries fast under realistic procurement workloads.",
+    solution:
+      "Designed MongoDB schemas with targeted indexes, separated RFP/bid lifecycles into clear API surfaces, and added an AI generation module for first-draft RFPs.",
+    deployment: [
+      "FastAPI backend deployed as part of the BuildX platform",
+      "APIs tested and documented in Postman",
+      "Integrated with the React frontend for end-to-end flows",
+    ],
+    results: [
+      "Automated RFP and bid workflows end-to-end",
+      "AI-assisted RFP drafts cut manual authoring time",
+      "Reliable PDF generation for procurement documents",
+    ],
+    metrics: [
+      { label: "Backend", value: "FastAPI" },
+      { label: "Data", value: "MongoDB" },
+      { label: "AI", value: "RFP Generation" },
+    ],
+    status: { label: "Private · built at Nainovate Technologies", tone: "private" },
+  },
+  {
+    slug: "ev-range-prediction",
+    title: "Electric Vehicle Range Prediction",
+    tagline: "Regression models predicting EV range and analyzing pollution metrics.",
+    categories: ["AI", "Backend"],
+    icon: LineChart,
+    accent: "#34d399",
+    problem:
+      "EV range varies with weather, load and driving patterns. The goal: train regression models that predict realistic range and analyze related pollution metrics.",
+    features: [
+      "Regression models for EV range prediction",
+      "Pollution metric analysis",
+      "Feature engineering and preprocessing",
+      "Matplotlib-based visualizations",
+    ],
+    architecture: [
+      "Data preprocessing and feature engineering pipeline in pandas",
+      "scikit-learn regression models for range prediction",
+      "Evaluation and visualization with matplotlib",
+    ],
+    stack: ["Python", "scikit-learn", "pandas", "matplotlib"],
+    challenges:
+      "Cleaning noisy EV data and choosing features that actually generalize across driving conditions.",
+    solution:
+      "Built a focused preprocessing pipeline, ran feature-importance analysis and iterated on regression models for higher accuracy.",
+    deployment: [
+      "Academic project — Jupyter-driven workflow",
+    ],
+    results: [
+      "Improved model accuracy through feature engineering",
+      "Clear visual analysis of range vs pollution trends",
+    ],
+    metrics: [
+      { label: "Year", value: "2024" },
+      { label: "Type", value: "ML / Regression" },
+      { label: "Stack", value: "scikit-learn" },
+    ],
+    status: { label: "Academic project", tone: "source" },
+  },
+  {
+    slug: "ai-rootkit-detection",
+    title: "AI-Powered Rootkit Detection",
+    tagline: "Cybersecurity detection using stacked ensemble machine learning.",
+    categories: ["AI", "Backend"],
+    icon: ShieldCheck,
+    accent: "#f472b6",
+    problem:
+      "Rootkits hide malicious system behavior from traditional detection. The goal: classify malicious system behavior with higher accuracy using stacked ensembles.",
+    features: [
+      "Stacked ensemble classification",
+      "Malicious behavior detection",
+      "Improved performance over single models",
+    ],
+    architecture: [
+      "Feature extraction from system behavior data",
+      "Base learners combined through a stacked ensemble",
+      "Evaluation against malicious / benign labels",
+    ],
+    stack: ["Python", "scikit-learn", "Ensemble Learning"],
+    challenges:
+      "Handling class imbalance and squeezing extra accuracy out of base classifiers.",
+    solution:
+      "Used stacked ensembling on top of complementary base learners and tuned thresholds for the security use-case.",
+    deployment: [
+      "Academic research project",
+    ],
+    results: [
+      "Improved detection performance vs single classifiers",
+      "Reproducible evaluation pipeline",
+    ],
+    metrics: [
+      { label: "Year", value: "2024" },
+      { label: "Type", value: "ML / Security" },
+      { label: "Approach", value: "Stacked Ensembles" },
+    ],
+    status: { label: "Academic project", tone: "source" },
   },
 ];
 
 export const projectFilters: (ProjectCategory | "All")[] = [
   "All",
-  "DevOps",
+  "Frontend",
   "Backend",
   "AI",
   "Platform",
@@ -471,11 +551,11 @@ export const projectFilters: (ProjectCategory | "All")[] = [
 /* ------------------------------------------------------------------ */
 
 export type DiagramKind =
-  | "aws"
-  | "kubernetes"
-  | "cicd"
+  | "fullstack"
+  | "license"
   | "rag"
-  | "observability";
+  | "procurement"
+  | "api";
 
 export interface FlowNode {
   label: string;
@@ -494,77 +574,78 @@ export interface ArchitectureCard {
 
 export const architectureCards: ArchitectureCard[] = [
   {
-    id: "aws",
-    title: "AWS Cloud Architecture",
+    id: "fullstack",
+    title: "Full-Stack Architecture",
     description:
-      "User traffic flows through CloudFront and Nginx into FastAPI, persisting to MongoDB — fronted by SSL and Route53 DNS.",
-    icon: Cloud,
-    tags: ["CloudFront", "Nginx", "FastAPI", "MongoDB", "SSL"],
+      "Next.js frontend talks to FastAPI services through REST APIs, persisting to MongoDB — the stack I ship every product on.",
+    icon: Code2,
+    tags: ["Next.js", "React", "FastAPI", "MongoDB"],
     flow: [
-      { label: "User", sub: "request", accent: "#38bdf8" },
-      { label: "CloudFront", sub: "CDN + SSL", accent: "#22d3ee" },
-      { label: "Nginx", sub: "reverse proxy", accent: "#6366f1" },
-      { label: "FastAPI", sub: "application", accent: "#818cf8" },
+      { label: "User", sub: "browser", accent: "#38bdf8" },
+      { label: "Next.js", sub: "React frontend", accent: "#22d3ee" },
+      { label: "REST API", sub: "FastAPI", accent: "#6366f1" },
+      { label: "Services", sub: "business logic", accent: "#818cf8" },
       { label: "MongoDB", sub: "data store", accent: "#34d399" },
     ],
   },
   {
-    id: "kubernetes",
-    title: "Kubernetes Architecture",
+    id: "license",
+    title: "License Management Flow",
     description:
-      "Ingress routes requests to frontend pods and backend pods, which read and write to the database — scaled and self-healed by the cluster.",
-    icon: Boxes,
-    tags: ["Ingress", "Frontend Pods", "Backend Pods", "Database"],
+      "Customer onboarding produces a product key issued and validated by the license service, then deployed in either SaaS or On-Prem mode.",
+    icon: KeyRound,
+    tags: ["Onboarding", "Product Key", "Validation", "SaaS / On-Prem"],
     flow: [
-      { label: "Ingress", sub: "nginx controller", accent: "#38bdf8" },
-      { label: "Frontend Pods", sub: "replicated", accent: "#22d3ee" },
-      { label: "Backend Pods", sub: "replicated", accent: "#6366f1" },
-      { label: "Database", sub: "persistent", accent: "#34d399" },
-    ],
-  },
-  {
-    id: "cicd",
-    title: "CI/CD Architecture",
-    description:
-      "A commit to GitHub triggers GitHub Actions, which builds and pushes an image to Docker Hub, then deploys to Kubernetes in production.",
-    icon: Workflow,
-    tags: ["GitHub", "Actions", "Docker Hub", "Kubernetes", "Production"],
-    flow: [
-      { label: "GitHub", sub: "git push", accent: "#38bdf8" },
-      { label: "GitHub Actions", sub: "build · test", accent: "#22d3ee" },
-      { label: "Docker Hub", sub: "image registry", accent: "#6366f1" },
-      { label: "Kubernetes", sub: "rollout", accent: "#818cf8" },
-      { label: "Production", sub: "live", accent: "#34d399" },
+      { label: "Customer", sub: "onboarding", accent: "#38bdf8" },
+      { label: "License Service", sub: "issue + validate", accent: "#22d3ee" },
+      { label: "Product Key", sub: "assigned", accent: "#6366f1" },
+      { label: "Deployment", sub: "SaaS or On-Prem", accent: "#818cf8" },
+      { label: "AI Platform", sub: "activated", accent: "#34d399" },
     ],
   },
   {
     id: "rag",
-    title: "AI RAG Architecture",
+    title: "AI Decision Workspace — RAG",
     description:
-      "A user query hits the API, is embedded, retrieves context from Qdrant, and the LLM returns a grounded response.",
+      "A user query is enriched with Freshdesk ticket context, embedded, retrieved against the KB, and answered by the LLM.",
     icon: Brain,
-    tags: ["API", "Embeddings", "Qdrant", "LLM", "Response"],
+    tags: ["Freshdesk", "Embeddings", "Semantic Search", "LLM"],
     flow: [
-      { label: "User", sub: "query", accent: "#38bdf8" },
-      { label: "API", sub: "FastAPI", accent: "#22d3ee" },
-      { label: "Embedding Model", sub: "vectorize", accent: "#6366f1" },
-      { label: "Qdrant", sub: "vector search", accent: "#818cf8" },
-      { label: "LLM", sub: "OpenAI / Gemini", accent: "#f472b6" },
-      { label: "Response", sub: "grounded", accent: "#34d399" },
+      { label: "Agent", sub: "query + ticket", accent: "#38bdf8" },
+      { label: "Backend", sub: "FastAPI", accent: "#22d3ee" },
+      { label: "Embeddings", sub: "vectorize", accent: "#6366f1" },
+      { label: "KB Retrieval", sub: "semantic search", accent: "#818cf8" },
+      { label: "LLM", sub: "grounded answer", accent: "#f472b6" },
+      { label: "Workspace UI", sub: "rendered", accent: "#34d399" },
     ],
   },
   {
-    id: "observability",
-    title: "Observability Architecture",
+    id: "procurement",
+    title: "BuildX Procurement Flow",
     description:
-      "Applications expose metrics scraped by Prometheus, visualized in Grafana dashboards with alerting on SLOs.",
-    icon: Activity,
-    tags: ["Application", "Prometheus", "Grafana", "Dashboards"],
+      "An RFP is created, distributed for bids, AI-assisted drafting fills content, and a PDF is generated for vendors.",
+    icon: ShoppingCart,
+    tags: ["RFP", "Bids", "AI Drafting", "PDF"],
     flow: [
-      { label: "Application", sub: "/metrics", accent: "#38bdf8" },
-      { label: "Prometheus", sub: "scrape · store", accent: "#6366f1" },
-      { label: "Grafana", sub: "visualize", accent: "#34d399" },
-      { label: "Dashboards", sub: "alerts · SLOs", accent: "#fbbf24" },
+      { label: "RFP Creation", sub: "frontend", accent: "#38bdf8" },
+      { label: "FastAPI", sub: "RFP service", accent: "#22d3ee" },
+      { label: "AI Generation", sub: "content draft", accent: "#6366f1" },
+      { label: "Bid Management", sub: "vendor workflow", accent: "#818cf8" },
+      { label: "PDF Export", sub: "document", accent: "#34d399" },
+    ],
+  },
+  {
+    id: "api",
+    title: "REST API Integration",
+    description:
+      "Postman-documented APIs sit between the React frontend and FastAPI services, validated by automated tests.",
+    icon: Network,
+    tags: ["REST", "Postman", "Testing", "Integration"],
+    flow: [
+      { label: "Frontend", sub: "React / Next.js", accent: "#38bdf8" },
+      { label: "REST API", sub: "contract", accent: "#6366f1" },
+      { label: "FastAPI", sub: "validation", accent: "#818cf8" },
+      { label: "Postman", sub: "tested + documented", accent: "#fbbf24" },
     ],
   },
 ];
@@ -582,34 +663,46 @@ export interface SkillGroup {
 
 export const skillGroups: SkillGroup[] = [
   {
-    domain: "DevOps",
-    icon: Workflow,
+    domain: "Languages",
+    icon: Code2,
     accent: "#38bdf8",
-    skills: ["Docker", "Kubernetes", "GitHub Actions", "Jenkins", "Nginx", "Linux", "CI/CD"],
+    skills: ["Python", "JavaScript", "TypeScript", "SQL"],
   },
   {
-    domain: "Cloud",
-    icon: Cloud,
+    domain: "Frontend",
+    icon: Sparkles,
     accent: "#22d3ee",
-    skills: ["AWS", "EC2", "S3", "CloudFront", "Route53", "VPC", "EBS"],
+    skills: ["Next.js", "React.js", "HTML", "CSS", "Tailwind"],
   },
   {
     domain: "Backend",
     icon: Server,
     accent: "#818cf8",
-    skills: ["Python", "FastAPI", "Node.js", "REST APIs", "MongoDB", "MySQL", "Redis"],
+    skills: ["FastAPI", "Python", "REST APIs"],
   },
   {
-    domain: "Observability",
-    icon: Gauge,
+    domain: "Databases",
+    icon: Database,
     accent: "#34d399",
-    skills: ["Prometheus", "Grafana", "Alerting", "Dashboards"],
+    skills: ["MongoDB", "PostgreSQL"],
   },
   {
-    domain: "AI",
+    domain: "Generative AI",
     icon: Brain,
     accent: "#f472b6",
-    skills: ["OpenAI", "Gemini", "Qdrant", "RAG", "Vector DBs", "AI Agents"],
+    skills: ["LLM Basics", "RAG Pipelines", "Semantic Search", "Context Retrieval"],
+  },
+  {
+    domain: "Data & Analytics",
+    icon: LineChart,
+    accent: "#fbbf24",
+    skills: ["Power BI", "Data Visualization"],
+  },
+  {
+    domain: "Tools",
+    icon: Wrench,
+    accent: "#9aa6bd",
+    skills: ["Git", "GitHub", "Postman", "Docker (Basic)", "VS Code"],
   },
 ];
 
@@ -625,46 +718,46 @@ export interface Principle {
 
 export const engineeringPrinciples: Principle[] = [
   {
-    title: "Automation First",
+    title: "Ship End-to-End",
     description:
-      "If it's done twice, it gets automated — builds, tests, deployments and operational toil.",
-    icon: Workflow,
+      "Own features from UI through API to database — frontends and backends as one product, not two.",
+    icon: Layers,
   },
   {
-    title: "Infrastructure as Code",
+    title: "Clean API Contracts",
     description:
-      "Versioned, reproducible, auditable environments. No snowflake servers, no surprises.",
-    icon: Terminal,
-  },
-  {
-    title: "Scalable Architecture",
-    description:
-      "Design for horizontal scale, statelessness and graceful degradation from day one.",
+      "REST contracts designed, documented in Postman, and validated before the frontend ever calls them.",
     icon: Network,
   },
   {
-    title: "Observability-Driven Operations",
+    title: "Reusable Components",
     description:
-      "Metrics, logs and alerts on every service — you can't operate what you can't see.",
-    icon: Activity,
+      "Build UI as a system of reusable components and mock-data scaffolds so features scale fast.",
+    icon: Boxes,
   },
   {
-    title: "Continuous Delivery",
+    title: "Schema-First Data",
     description:
-      "Small, frequent, reversible releases with zero-downtime rollouts and fast rollback.",
-    icon: GitBranch,
+      "Design MongoDB schemas with proper indexing up front — query patterns drive structure.",
+    icon: Database,
   },
   {
-    title: "Security Mindset",
+    title: "Ground AI in Real Data",
     description:
-      "Least privilege, secrets hygiene, SSL and secure defaults baked into the pipeline.",
-    icon: Lock,
+      "RAG over real customer KBs and tickets — never let the model hallucinate when the answer is on disk.",
+    icon: Brain,
   },
   {
-    title: "Reliability Engineering",
+    title: "Environment-Aware Config",
     description:
-      "SLOs, health checks and self-healing systems that stay up under real-world load.",
+      "One codebase, multiple deployment modes (SaaS, On-Prem) — switched by config, not by fork.",
     icon: ShieldCheck,
+  },
+  {
+    title: "Iterate with Real Feedback",
+    description:
+      "Mock data to move fast, real APIs to stay honest — close the loop with users every iteration.",
+    icon: GitBranch,
   },
 ];
 
@@ -680,34 +773,34 @@ export interface Achievement {
 
 export const achievements: Achievement[] = [
   {
-    title: "TCS Digital System Engineer Offer",
+    title: "Enterprise License Management Shipped",
     description:
-      "Earned the premium TCS Digital track offer — recognition for top-tier engineering aptitude.",
-    icon: Rocket,
+      "Designed and delivered a complete License Management System supporting both SaaS and On-Premise customers.",
+    icon: KeyRound,
   },
   {
-    title: "Production AWS Deployments",
+    title: "AI Decision Workspace",
     description:
-      "Provisioned, deployed and operated real-world workloads on AWS cloud infrastructure.",
-    icon: Cloud,
-  },
-  {
-    title: "Kubernetes Deployments",
-    description:
-      "Shipped containerized services to Kubernetes with scaling, self-healing and rolling updates.",
-    icon: Boxes,
-  },
-  {
-    title: "AI Product Development",
-    description:
-      "Built and integrated RAG and LLM-powered features into production AI products.",
+      "Built a Freshdesk-grounded AI assistant with RAG-based retrieval for enterprise support workflows.",
     icon: Brain,
   },
   {
-    title: "End-to-End Platform Ownership",
+    title: "BuildX Procurement Platform",
     description:
-      "Owned products from architecture through deployment, monitoring and maintenance.",
-    icon: Layers,
+      "Shipped FastAPI services, MongoDB schemas, PDF generation and AI-driven RFP modules end-to-end.",
+    icon: ShoppingCart,
+  },
+  {
+    title: "B.Tech in Computer Science",
+    description:
+      "Karunya Institute of Technology and Sciences — B.Tech CSE, graduated May 2025.",
+    icon: Rocket,
+  },
+  {
+    title: "Certified — Cloud & Data",
+    description:
+      "Google Data Analytics · Microsoft Azure Data Fundamentals · NPTEL Industry 4.0 and Industrial IoT.",
+    icon: ShieldCheck,
   },
 ];
 
@@ -725,38 +818,38 @@ export const workflowSteps: WorkflowStep[] = [
   {
     title: "AI-Assisted Development",
     description:
-      "Leverage AI tooling (Cursor, Claude, Copilot) to accelerate design, implementation and review without sacrificing quality.",
+      "Use AI coding tools to accelerate UI scaffolding, API drafts and review — keeping a human in the loop on design.",
     icon: Sparkles,
   },
   {
-    title: "Agentic Coding Workflows",
+    title: "Mock-Data First",
     description:
-      "Orchestrate AI agents for scaffolding, refactoring and testing — keeping a human firmly in the loop on architecture.",
-    icon: Bot,
+      "Build the UI on mock data so frontend and backend can move in parallel — then swap to real APIs.",
+    icon: FileText,
   },
   {
-    title: "Rapid Prototyping",
+    title: "Schema-Driven Backend",
     description:
-      "Validate ideas fast with throwaway spikes and tight feedback loops before committing to production design.",
-    icon: Zap,
+      "Design MongoDB schemas and FastAPI contracts before implementation — fewer surprises at integration time.",
+    icon: Database,
   },
   {
-    title: "Fast MVP Delivery",
+    title: "Postman-Verified APIs",
     description:
-      "Ship a working, deployable MVP quickly, then iterate based on real usage and metrics.",
-    icon: Rocket,
+      "Every REST endpoint documented and tested in Postman before the frontend depends on it.",
+    icon: Network,
   },
   {
-    title: "Automation-First Mindset",
+    title: "Reusable Component Library",
     description:
-      "Automate builds, tests, deployments and ops toil so engineering time goes to product, not plumbing.",
-    icon: Workflow,
+      "UI as composable building blocks — dashboards, workflow UIs and AI search reuse the same primitives.",
+    icon: Boxes,
   },
   {
-    title: "Infrastructure as Code",
+    title: "RAG for Real Knowledge",
     description:
-      "Treat infrastructure as versioned, reproducible code for consistent, auditable environments.",
-    icon: Terminal,
+      "Ground AI assistants in customer KBs and ticket data — semantic search + context-aware generation.",
+    icon: Brain,
   },
 ];
 
@@ -765,14 +858,15 @@ export const workflowSteps: WorkflowStep[] = [
 /* ------------------------------------------------------------------ */
 
 export const marqueeTech: string[] = [
-  "AWS", "Docker", "Kubernetes", "FastAPI", "Python", "Node.js", "GitHub Actions",
-  "Jenkins", "Nginx", "Linux", "Prometheus", "Grafana", "MongoDB", "MySQL",
-  "Redis", "OpenAI", "Gemini", "Qdrant", "RAG", "CI/CD", "Terraform",
+  "Next.js", "React.js", "TypeScript", "JavaScript", "Python", "FastAPI",
+  "MongoDB", "PostgreSQL", "REST APIs", "RAG", "Semantic Search",
+  "Tailwind", "Postman", "Git", "GitHub", "Docker", "Power BI",
+  "Freshdesk", "LLMs", "Azure", "VS Code",
 ];
 
 /* Re-exported icons for convenience in components */
 export const icons = {
   Cloud, Server, Container, Boxes, GitBranch, Cpu, Database, Network, Workflow,
   Gauge, Activity, Bot, Sparkles, Code2, Terminal, Layers, ShieldCheck, Lock,
-  Wrench, Rocket, Zap, LineChart, Brain, Search, Webhook,
+  Wrench, Rocket, Zap, LineChart, Brain, Search, Webhook, FileText, KeyRound, ShoppingCart,
 };

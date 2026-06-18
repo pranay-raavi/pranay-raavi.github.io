@@ -15,14 +15,14 @@ const channels = [
   },
   {
     label: "LinkedIn",
-    value: "in/dhaneshwara-rao",
+    value: "in/raavi-pranay",
     href: profile.socials.linkedin,
     Icon: LinkedInIcon,
     external: true,
   },
   {
     label: "GitHub",
-    value: "@DhaneshPachipulusu",
+    value: "@pranay-raavi",
     href: profile.socials.github,
     Icon: GitHubIcon,
     external: true,
@@ -58,8 +58,9 @@ export function Contact() {
               <span className="text-gradient-accent">reliable</span>.
             </h2>
             <p className="mt-4 max-w-md leading-relaxed text-muted">
-              Looking for a DevOps, Backend, or AI Applications Engineer who can
-              take systems all the way to production? Let&apos;s talk.
+              Looking for a Software Developer who can ship full-stack
+              Next.js + FastAPI products and integrate AI into real
+              workflows? Let&apos;s talk.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">

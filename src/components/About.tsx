@@ -31,24 +31,24 @@ export function About() {
         >
           <p className="text-lg leading-relaxed text-muted">
             I&apos;m a{" "}
-            <span className="font-medium text-fg">DevOps &amp; Backend Engineer</span>{" "}
-            with hands-on experience building and deploying production-grade
-            applications and AI-powered systems.
+            <span className="font-medium text-fg">Software Developer</span>{" "}
+            with 1+ year of industry experience building enterprise-grade SaaS
+            and On-Premise systems.
           </p>
           <p className="mt-4 leading-relaxed text-muted">
             My expertise spans{" "}
-            <span className="text-accent">AWS cloud infrastructure</span>, Docker,
-            Kubernetes, CI/CD automation, backend development, monitoring,
-            observability, and AI integrations. I specialize in taking products
-            all the way to production — deployment, scalability, monitoring,
-            security, and automation.
+            <span className="text-accent">Next.js, React.js, FastAPI and MongoDB</span>{" "}
+            — designing full-stack applications, REST APIs and AI-driven
+            workflow modules. I&apos;ve shipped license management,
+            procurement automation and RAG-powered customer-support
+            platforms for enterprise users.
           </p>
 
           <div className="mt-7 grid grid-cols-3 gap-3 border-t border-border pt-6">
             {[
-              { k: "Primary", v: "DevOps" },
-              { k: "Then", v: "Backend" },
-              { k: "Plus", v: "AI Apps" },
+              { k: "Primary", v: "Full-Stack" },
+              { k: "Backend", v: "FastAPI" },
+              { k: "Plus", v: "AI / RAG" },
             ].map((x) => (
               <div key={x.k}>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-faint">

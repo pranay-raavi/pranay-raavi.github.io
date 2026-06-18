@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Dhaneswara Rao Pachipulusu — DevOps · Backend · AI Applications Engineer";
+export const alt = "Raavi Pranay — Software Developer · Full-Stack · AI Applications Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const dynamic = "force-static";
@@ -48,7 +48,7 @@ export default function OgImage() {
               color: "#22d3ee",
             }}
           >
-            DP
+            RP
           </div>
           Portfolio
         </div>
@@ -56,7 +56,7 @@ export default function OgImage() {
         <div
           style={{
             marginTop: 34,
-            fontSize: 68,
+            fontSize: 76,
             fontWeight: 800,
             lineHeight: 1.05,
             background: "linear-gradient(100deg, #e7ecf5, #7dd3fc 55%, #818cf8)",
@@ -64,18 +64,18 @@ export default function OgImage() {
             color: "transparent",
           }}
         >
-          Dhaneswara Rao Pachipulusu
+          Raavi Pranay
         </div>
 
         <div style={{ marginTop: 22, fontSize: 42, fontWeight: 700, color: "#7dd3fc", display: "flex" }}>
-          DevOps Engineer
+          Software Developer
         </div>
         <div style={{ marginTop: 6, fontSize: 28, fontWeight: 500, color: "#9aa6bd", display: "flex" }}>
-          Backend Engineer · AI Applications Engineer
+          Full-Stack Engineer · AI Applications Engineer
         </div>
 
         <div style={{ marginTop: 40, display: "flex", gap: 14, flexWrap: "wrap" }}>
-          {["AWS", "Kubernetes", "Docker", "FastAPI", "CI/CD", "Prometheus"].map(
+          {["Next.js", "React.js", "FastAPI", "MongoDB", "REST APIs", "RAG"].map(
             (t) => (
               <div
                 key={t}

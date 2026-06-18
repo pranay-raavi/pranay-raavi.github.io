@@ -26,8 +26,8 @@ export function Footer() {
               <span className="text-fg">{profile.name}</span>
             </a>
             <p className="mt-3 max-w-xs text-sm text-faint">
-              DevOps · Backend · AI Applications Engineer. Building, deploying and
-              operating production systems.
+              Software Developer · Full-Stack · AI Applications. Shipping
+              enterprise SaaS and On-Premise systems with Next.js + FastAPI.
             </p>
           </div>
 

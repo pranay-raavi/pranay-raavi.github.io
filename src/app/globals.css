@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ----------------------------------------------------------------------------
-   Design system — dark-first, cloud/DevOps engineering aesthetic
+   Design system — dark-first, full-stack engineering aesthetic
    Tailwind v4 CSS-first config (@theme). Accent: cyan → blue → violet.
 ---------------------------------------------------------------------------- */
 @theme {

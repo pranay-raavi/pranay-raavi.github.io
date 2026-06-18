@@ -9,7 +9,7 @@ import {
 } from "react";
 import { profile } from "./data";
 
-const GH_USER = "DhaneshPachipulusu";
+const GH_USER = "pranay-raavi";
 
 export interface GitHubStats {
   repos: number;

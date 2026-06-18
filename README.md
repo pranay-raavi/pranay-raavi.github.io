@@ -1,17 +1,20 @@
-# Dhaneswara Rao Pachipulusu — Portfolio
+# Raavi Pranay — Portfolio
 
-A premium, recruiter-focused engineering portfolio positioning Dhaneswara Rao Pachipulusu as a
-**DevOps Engineer** (with Backend & AI Applications engineering as supporting capabilities).
+A premium, recruiter-focused engineering portfolio positioning Raavi Pranay as a
+**Software Developer** (Full-Stack Engineer with AI Applications as a supporting
+capability), highlighting enterprise SaaS and On-Premise systems shipped at
+Nainovate Technologies.
 
 Built with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind CSS v4**, and
 **Framer Motion**. Dark-theme-first, fully responsive, SEO-optimized, and
-deployable to Vercel with no changes.
+deployable to GitHub Pages / Vercel with no changes.
 
 ## Sections
 
 Hero (animated terminal + stats) · Tech marquee · About · Experience timeline ·
-Featured Projects (filterable, case-study modals) · **Architecture Showcase**
-(interactive animated SVG diagrams: AWS, Kubernetes, CI/CD, RAG, Observability) ·
+Featured Projects (filterable, case-study modals — License Management, BuildX
+Procurement, AI Decision Workspace) · **Architecture Showcase** (interactive
+animated SVG diagrams: Full-Stack, License flow, RAG, Procurement, REST APIs) ·
 Skills · Achievements · Modern Engineering Workflow · Contact · Footer.
 
 ## Develop
@@ -27,10 +30,10 @@ npm run start    # serve the production build
 
 All content lives in [`src/lib/data.ts`](src/lib/data.ts). Update these before deploying:
 
-- **`profile.socials.linkedin`** — replace the placeholder with your real LinkedIn URL.
+- **`profile.socials.linkedin`** — confirm the real LinkedIn URL.
 - **`profile.siteUrl`** — set to your deployed domain (used for SEO, OG, sitemap, JSON-LD).
-- **`public/resume.pdf`** — replace the placeholder PDF with your real resume.
-- Email / GitHub are already wired (`nainovate@gmail.com`, `DhaneshPachipulusu`).
+- **`public/resume.pdf`** — replace with your latest resume PDF.
+- Email / GitHub are wired to `pranayraavi23@gmail.com` and `pranay-raavi`.
 
 Design tokens (colors, fonts, animations) live in
 [`src/app/globals.css`](src/app/globals.css) under the Tailwind v4 `@theme` block.
@@ -44,4 +47,4 @@ dynamically generated OG image ([`opengraph-image.tsx`](src/app/opengraph-image.
 
 ## Deploy
 
-Push to GitHub and import into [Vercel](https://vercel.com/new) — zero config.
+Push to GitHub — the included Pages workflow handles the static export.
