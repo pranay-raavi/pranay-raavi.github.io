@@ -61,7 +61,7 @@ const commands: Record<string, { desc: string; run: Handler }> = {
           </Row>
         );
       }
-      ctx.print(<Row>{dim("tip: try 'deploy --watch', 'projects', or 'open github'")}</Row>);
+      ctx.print(<Row>{dim("tip: try 'ai-query', 'projects', or 'open github'")}</Row>);
     },
   },
   whoami: {
@@ -190,31 +190,49 @@ const commands: Record<string, { desc: string; run: Handler }> = {
       );
     },
   },
-  deploy: {
-    desc: "run the CI/CD pipeline (try: deploy --watch)",
-    run: async (args, ctx) => {
-      const sha = "a1b2c3d";
+  "ai-query": {
+    desc: "simulate a RAG query against the Freshdesk KB",
+    run: async (_a, ctx) => {
+      const ticket = "TKT-4821";
       const steps: [string, string, number][] = [
-        [`commit ${sha} pushed to main`, "", 350],
-        ["build · next build (static export)", "ok", 700],
-        ["test  · 38 passed", "ok", 600],
-        ["push  · ghcr.io/pranay-raavi/portfolio:latest", "ok", 650],
-        ["deploy· github pages (actions)", "ok", 750],
-        ["health· pranay-raavi.github.io 200", "healthy", 500],
+        [`loading ticket ${ticket} from Freshdesk`,   "fetched",   380],
+        ["chunking KB documents (42 docs)",            "chunked",   450],
+        ["generating query embeddings",                "done",      320],
+        ["semantic search  · top-3 passages retrieved","retrieved", 500],
+        ["fusing ticket context + KB passages",        "fused",     280],
+        ["sending context window to LLM",              "sent",      420],
+        ["streaming grounded answer",                  "ready",     600],
       ];
-      ctx.print(<Row>{acc("▶ pipeline started")}{dim("  (github actions)")}</Row>);
+
+      ctx.print(<Row>{acc("▶ AI query started")} {dim("  (RAG · Freshdesk KB)")}</Row>);
+      ctx.print(<Row>{dim(`  ticket: ${ticket}  ·  kb: freshdesk-workspace`)}</Row>);
+
       for (const [label, state, ms] of steps) {
         await ctx.sleep(ms);
-        const pad = label.padEnd(48, " ");
+        const pad = label.padEnd(46, " ");
         ctx.print(
           <Row>
-            {dim("›")} {pad}
-            {state === "healthy" ? ok("✓ " + state) : state ? ok("✓ " + state) : dim("…")}
+            {dim("›")} {pad} {ok("✓ " + state)}
           </Row>
         );
       }
+
       await ctx.sleep(300);
-      ctx.print(<Row>{ok("✓ deployed to production")} {dim("· https://pranay-raavi.github.io")}</Row>);
+      ctx.print(<Row>{""}</Row>);
+      ctx.print(<Row>{acc("answer")} {dim("—")}</Row>);
+      ctx.print(
+        <Row>
+          {dim("  ")}
+          {"The issue stems from an expired SaaS license key. Navigate to"}
+        </Row>
+      );
+      ctx.print(
+        <Row>
+          {dim("  ")}
+          {"Settings → License → Renew and enter the new key from your email."}
+        </Row>
+      );
+      ctx.print(<Row>{dim("  confidence: 94%  ·  sources: KB-112, KB-089")}</Row>);
     },
   },
   banner: {
@@ -347,7 +365,7 @@ export const Terminal = forwardRef<TerminalHandle, { className?: string }>(
           </Row>,
           <Row key="b3">
             type <span className="text-accent">help</span> to list commands,{" "}
-            <span className="text-accent">deploy --watch</span> to run the pipeline
+            <span className="text-accent">ai-query</span> to run the RAG pipeline
           </Row>,
         ];
         for (const b of boot) {
