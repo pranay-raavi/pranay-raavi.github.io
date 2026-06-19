@@ -7,7 +7,6 @@ import { profile } from "@/lib/data";
 
 const links = [
   { label: "About", href: "#about" },
-  { label: "Console", href: "#console" },
   { label: "Experience", href: "#experience" },
   { label: "Architecture", href: "#architecture" },
   { label: "Projects", href: "#projects" },

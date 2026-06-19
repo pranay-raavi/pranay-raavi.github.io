@@ -8,7 +8,6 @@ import { Hero } from "@/components/Hero";
 import { TechMarquee } from "@/components/ui/TechMarquee";
 import { SystemStatus } from "@/components/SystemStatus";
 import { About } from "@/components/About";
-import { Console } from "@/components/Console";
 import { WhatIBuild } from "@/components/WhatIBuild";
 import { Experience } from "@/components/Experience";
 import { Architecture } from "@/components/Architecture";
@@ -34,7 +33,6 @@ export default function Home() {
         <TechMarquee />
         <SystemStatus />
         <About />
-        <Console />
         <WhatIBuild />
         <Experience />
         <Architecture />

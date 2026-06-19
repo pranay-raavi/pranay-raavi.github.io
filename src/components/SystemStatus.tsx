@@ -1,26 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Activity, GitCommitHorizontal, Star, Boxes } from "lucide-react";
+import { Brain, GitCommitHorizontal, Star, Sparkles, Boxes } from "lucide-react";
 import { useGitHub, timeAgo } from "@/lib/useGitHub";
-
-function Dot() {
-  return (
-    <span className="relative flex h-2 w-2">
-      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald opacity-75" />
-      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald" />
-    </span>
-  );
-}
 
 export function SystemStatus() {
   const gh = useGitHub();
-
-  const services = [
-    { name: "portfolio", up: true },
-    { name: "ai-bot", up: true },
-    { name: "jarvis", up: true },
-  ];
 
   return (
     <motion.div
@@ -31,20 +16,17 @@ export function SystemStatus() {
     >
       <div className="container-page">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 py-2.5 font-mono text-xs">
-          <span className="inline-flex items-center gap-2 font-medium text-emerald">
-            <Dot />
-            ALL SYSTEMS OPERATIONAL
+          {/* AI badges */}
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-0.5 text-accent">
+            <Brain className="h-3 w-3" />
+            AI Engineer
           </span>
-
           <span className="hidden items-center gap-1.5 text-muted sm:inline-flex">
-            {services.map((s) => (
-              <span key={s.name} className="inline-flex items-center gap-1.5 px-1">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald" />
-                {s.name}
-              </span>
-            ))}
+            <Sparkles className="h-3 w-3 text-violet-400" />
+            RAG · Next.js · FastAPI
           </span>
 
+          {/* GitHub stats */}
           <span className="ml-auto flex flex-wrap items-center gap-x-5 gap-y-1 text-faint">
             <span className="inline-flex items-center gap-1.5" title="Public repositories">
               <Boxes className="h-3.5 w-3.5 text-accent" />
@@ -56,14 +38,10 @@ export function SystemStatus() {
             </span>
             <span className="inline-flex items-center gap-1.5" title="Most recent push">
               <GitCommitHorizontal className="h-3.5 w-3.5 text-accent-2" />
-              last commit{" "}
+              last push{" "}
               <span className="text-muted">
                 {gh.lastCommit ? timeAgo(gh.lastCommit) : gh.loading ? "··" : "recently"}
               </span>
-            </span>
-            <span className="inline-flex items-center gap-1.5" title="CI/CD">
-              <Activity className="h-3.5 w-3.5 text-emerald" />
-              build <span className="text-emerald">passing</span>
             </span>
             <span className="inline-flex items-center gap-1.5">
               {gh.live ? (

@@ -17,10 +17,10 @@ export function Architecture() {
         eyebrow="Architecture Showcase"
         title={
           <>
-            How I design <span className="text-gradient-accent">production systems</span>
+            How I architect <span className="text-gradient-accent">AI products</span>
           </>
         }
-        description="Interactive, animated diagrams of the infrastructure and data flows I build and operate."
+        description="Interactive, animated diagrams of the data flows and AI pipelines behind every product I build."
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-[340px_1fr]">

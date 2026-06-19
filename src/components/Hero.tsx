@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail, MapPin, Check, Building2 } from "lucide-react";
 import { profile, stats, trustIndicators } from "@/lib/data";
 import { Counter } from "./ui/Counter";
-import { ProductionTerminal } from "./ui/ProductionTerminal";
+import { AIWorkspaceCard } from "./ui/AIWorkspaceCard";
 import { GitHubIcon, LinkedInIcon } from "./ui/BrandIcons";
 
 const ease = [0.21, 0.47, 0.32, 0.98] as const;
@@ -144,9 +144,9 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right — live production dashboard */}
+          {/* Right — AI workspace assistant card */}
           <div className="flex justify-center lg:justify-end">
-            <ProductionTerminal />
+            <AIWorkspaceCard />
           </div>
         </div>
 

@@ -88,58 +88,6 @@ export const stats: Stat[] = [
 ];
 
 /* ------------------------------------------------------------------ */
-/* Live production dashboard (hero terminal)                          */
-/* ------------------------------------------------------------------ */
-
-export interface TermLine {
-  label: string;
-  value?: string;
-  ok?: boolean;
-}
-export interface TermGroup {
-  cmd: string;
-  lines: TermLine[];
-}
-
-export const terminalGroups: TermGroup[] = [
-  {
-    cmd: "ai-workspace init --env production",
-    lines: [
-      { label: "KB embeddings loaded", value: "1,842 vectors", ok: true },
-      { label: "RAG pipeline ready", value: "94% accuracy", ok: true },
-    ],
-  },
-  {
-    cmd: "query --ticket TKT-4821 --kb freshdesk",
-    lines: [
-      { label: "ticket context fetched", value: "0.08s", ok: true },
-      { label: "KB documents retrieved", value: "3 docs", ok: true },
-      { label: "grounded answer generated", ok: true },
-    ],
-  },
-  {
-    cmd: "npm run dev",
-    lines: [
-      { label: "Next.js 16 ready", value: "localhost:3000", ok: true },
-      { label: "Compiled /app", ok: true },
-    ],
-  },
-  {
-    cmd: "uvicorn app.main:app --reload",
-    lines: [
-      { label: "FastAPI started", value: "0.0.0.0:8000", ok: true },
-      { label: "MongoDB connected", ok: true },
-    ],
-  },
-  {
-    cmd: "pytest tests/ -q",
-    lines: [
-      { label: "38 passed", value: "0 failed", ok: true },
-    ],
-  },
-];
-
-/* ------------------------------------------------------------------ */
 /* About highlights                                                   */
 /* ------------------------------------------------------------------ */
 

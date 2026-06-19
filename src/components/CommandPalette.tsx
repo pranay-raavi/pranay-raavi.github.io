@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   Search,
   CornerDownLeft,
-  Terminal as TerminalIcon,
   User,
   Boxes,
   Workflow,
@@ -43,7 +42,6 @@ export function CommandPalette() {
 
   const items: Item[] = useMemo(
     () => [
-      { id: "console", label: "Open Console", hint: "interactive terminal", icon: TerminalIcon, run: () => go("#console"), keywords: "terminal cli command" },
       { id: "about", label: "About", hint: "section", icon: User, run: () => go("#about") },
       { id: "build", label: "What I Build", hint: "section", icon: Layers, run: () => go("#what-i-build") },
       { id: "experience", label: "Experience", hint: "section", icon: Workflow, run: () => go("#experience") },

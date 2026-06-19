@@ -11,8 +11,8 @@ export function EngineeringPrinciples() {
     <Section id="principles">
       <SectionHeading
         eyebrow="Engineering Principles"
-        title="How I operate"
-        description="The principles behind every system I design, deploy, and keep running."
+        title="How I build"
+        description="The principles behind every AI feature and frontend I design and ship."
       />
 
       <motion.div
