@@ -15,8 +15,9 @@ const stages = [
 
 /* ── Citation cards shown under the AI answer ── */
 const citations = [
-  { id: "KB-112", title: "SaaS License Renewal Flow", match: 94 },
-  { id: "KB-089", title: "Customer Lifecycle · Onboarding", match: 78 },
+  { id: "KB-204", title: "Enterprise SSO · Setup Guide", match: 95 },
+  { id: "KB-117", title: "Identity Providers · SAML & OIDC", match: 82 },
+  { id: "TKT-1893", title: "Past ticket · similar SSO query", match: 71 },
 ];
 
 export function AIWorkspaceCard() {
@@ -73,12 +74,12 @@ export function AIWorkspaceCard() {
             <div className="mb-1 flex items-center gap-2">
               <span className="text-xs font-medium text-fg">Support Agent</span>
               <span className="rounded border border-border bg-surface px-1.5 py-0.5 font-mono text-[10px] text-faint">
-                TKT-4821
+                TKT-5102
               </span>
             </div>
             <p className="rounded-2xl rounded-tl-sm border border-border bg-surface/60 px-3 py-2 text-sm leading-relaxed text-muted">
-              Customer says their SaaS license expired and they can&apos;t log in
-              to the AI platform. How do I resolve this?
+              Customer is asking about enterprise SSO setup — which identity
+              providers do we support and where do they configure it?
             </p>
           </div>
         </motion.div>
@@ -141,16 +142,16 @@ export function AIWorkspaceCard() {
 
             <div className="rounded-2xl rounded-tl-sm border border-accent/25 bg-gradient-to-br from-accent/8 to-accent-2/8 px-3 py-2.5">
               <p className="text-sm leading-relaxed text-fg/90">
-                The customer&apos;s SaaS license has expired. Ask them to:
+                From our internal docs and a similar resolved ticket:
               </p>
               <ul className="mt-1.5 space-y-1 text-sm leading-relaxed text-muted">
                 <li className="flex items-start gap-1.5">
                   <ArrowRight className="mt-1 h-3 w-3 shrink-0 text-accent" />
-                  Open <span className="font-medium text-fg">Settings → License → Renew</span>
+                  We support <span className="font-medium text-fg">SAML 2.0, OIDC, Okta, Azure AD</span>
                 </li>
                 <li className="flex items-start gap-1.5">
                   <ArrowRight className="mt-1 h-3 w-3 shrink-0 text-accent" />
-                  Enter the new key from the renewal email
+                  Setup is at <span className="font-medium text-fg">Settings → Security → SSO</span>
                 </li>
               </ul>
             </div>
@@ -158,7 +159,7 @@ export function AIWorkspaceCard() {
             {/* Citation cards */}
             <div className="mt-3 space-y-1.5">
               <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">
-                Sources · KB
+                Retrieved · KB + Tickets
               </p>
               {citations.map((c, i) => (
                 <motion.div
