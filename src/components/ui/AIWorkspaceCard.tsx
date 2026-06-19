@@ -7,10 +7,10 @@ const ease = [0.21, 0.47, 0.32, 0.98] as const;
 
 /* ── RAG pipeline stages (animated dots flow between them) ── */
 const stages = [
-  { label: "Embed",    color: "#c084fc" },
-  { label: "Retrieve", color: "#a855f7" },
-  { label: "Fuse",     color: "#d946ef" },
-  { label: "Generate", color: "#a3e635" },
+  { label: "Embed",    color: "#60a5fa" },
+  { label: "Retrieve", color: "#3b82f6" },
+  { label: "Fuse",     color: "#0ea5e9" },
+  { label: "Generate", color: "#10b981" },
 ];
 
 /* ── Citation cards shown under the AI answer ── */
@@ -28,11 +28,11 @@ export function AIWorkspaceCard() {
       className="relative w-full max-w-[440px]"
     >
       {/* Ambient gradient glow behind the card */}
-      <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] bg-[radial-gradient(60%_60%_at_70%_30%,rgba(168,85,247,0.30),transparent_70%),radial-gradient(60%_60%_at_20%_80%,rgba(217,70,239,0.20),transparent_70%)] blur-2xl" />
+      <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] bg-[radial-gradient(60%_60%_at_70%_30%,rgba(59,130,246,0.32),transparent_70%),radial-gradient(60%_60%_at_20%_80%,rgba(14,165,233,0.22),transparent_70%)] blur-2xl" />
 
       <div className="glass relative overflow-hidden rounded-3xl shadow-glow">
         {/* ── Header ── */}
-        <div className="relative flex items-center justify-between border-b border-border bg-gradient-to-br from-[#1a0f2e]/80 via-[#180b28]/80 to-[#2a1438]/80 px-5 py-4">
+        <div className="relative flex items-center justify-between border-b border-border bg-gradient-to-br from-[#0a1428]/80 via-[#0c1830]/80 to-[#0e2040]/80 px-5 py-4">
           <div className="flex items-center gap-3">
             <motion.div
               initial={{ scale: 0.85, opacity: 0 }}
@@ -84,7 +84,7 @@ export function AIWorkspaceCard() {
         </motion.div>
 
         {/* ── RAG pipeline strip with flowing dot ── */}
-        <div className="border-y border-border bg-[#070a14]/40 px-5 py-3">
+        <div className="border-y border-border bg-[#070c1a]/50 px-5 py-3">
           <p className="mb-2 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-faint">
             <Sparkles className="h-3 w-3 text-accent" />
             RAG Pipeline
@@ -98,7 +98,7 @@ export function AIWorkspaceCard() {
               initial={{ left: 0 }}
               animate={{ left: ["0%", "100%"] }}
               transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-              className="absolute top-[2px] h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_12px_3px_rgba(168,85,247,0.7)]"
+              className="absolute top-[2px] h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_12px_3px_rgba(59,130,246,0.75)]"
             />
 
             {stages.map((s, i) => (
@@ -111,7 +111,7 @@ export function AIWorkspaceCard() {
               >
                 <span
                   className="relative z-10 h-3.5 w-3.5 rounded-full border-2"
-                  style={{ borderColor: s.color, backgroundColor: "#0a0b14" }}
+                  style={{ borderColor: s.color, backgroundColor: "#060912" }}
                 />
                 <span className="font-mono text-[10px] font-medium" style={{ color: s.color }}>
                   {s.label}
@@ -189,7 +189,7 @@ export function AIWorkspaceCard() {
         </motion.div>
 
         {/* ── Footer status row ── */}
-        <div className="flex items-center gap-3 border-t border-border bg-[#070a14]/40 px-5 py-2.5">
+        <div className="flex items-center gap-3 border-t border-border bg-[#070c1a]/50 px-5 py-2.5">
           {[
             { icon: Brain,    label: "RAG",      color: "text-accent" },
             { icon: Zap,      label: "FastAPI",  color: "text-accent-2" },
