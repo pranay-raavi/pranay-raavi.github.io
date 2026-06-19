@@ -1,32 +1,33 @@
 @import "tailwindcss";
 
 /* ----------------------------------------------------------------------------
-   Design system — dark-first, full-stack engineering aesthetic
-   Tailwind v4 CSS-first config (@theme). Accent: cyan → blue → violet.
+   Design system — dark-first, AI engineer aesthetic
+   Tailwind v4 CSS-first config (@theme). Signature: electric violet → magenta,
+   lime as the highlight accent. Warm-tinted background, not blue-black.
 ---------------------------------------------------------------------------- */
 @theme {
-  --color-bg: #07080c;
-  --color-bg-soft: #0b0d14;
-  --color-surface: #0f1119;
-  --color-surface-2: #141826;
-  --color-border: #1d2233;
-  --color-border-strong: #2a3147;
+  --color-bg: #0a0712;             /* warm violet-tinted near-black */
+  --color-bg-soft: #0e0a18;
+  --color-surface: #15101f;        /* warm surface */
+  --color-surface-2: #1c1628;
+  --color-border: #2a2238;
+  --color-border-strong: #3a3050;
 
-  --color-fg: #e7ecf5;
-  --color-muted: #9aa6bd;
-  --color-faint: #6b7689;
+  --color-fg: #f4f1ff;              /* warm white with violet hint */
+  --color-muted: #b5a8d0;            /* lavender-gray */
+  --color-faint: #7e74a0;
 
-  --color-accent: #38bdf8;       /* sky-400  */
-  --color-accent-2: #6366f1;     /* indigo-500 */
-  --color-accent-3: #22d3ee;     /* cyan-400 */
-  --color-emerald: #34d399;
+  --color-accent: #a855f7;          /* violet-500 — signature */
+  --color-accent-2: #d946ef;        /* fuchsia-500 — gradient pair */
+  --color-accent-3: #c084fc;        /* violet-400 — lighter */
+  --color-emerald: #a3e635;          /* lime-400 — punchy highlight */
   --color-amber: #fbbf24;
 
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono), ui-monospace, "SFMono-Regular", monospace;
 
-  --shadow-glow: 0 0 0 1px rgba(56, 189, 248, 0.12),
-    0 12px 40px -12px rgba(56, 189, 248, 0.25);
+  --shadow-glow: 0 0 0 1px rgba(168, 85, 247, 0.18),
+    0 16px 50px -12px rgba(168, 85, 247, 0.35);
 
   --animate-marquee: marquee 40s linear infinite;
   --animate-shimmer: shimmer 2.5s linear infinite;
@@ -86,7 +87,7 @@ body {
 }
 
 ::selection {
-  background: rgba(56, 189, 248, 0.25);
+  background: rgba(168, 85, 247, 0.35);
   color: #fff;
 }
 
@@ -98,7 +99,7 @@ body {
   border-radius: 9999px;
   border: 2px solid var(--color-bg);
 }
-::-webkit-scrollbar-thumb:hover { background: #3a445f; }
+::-webkit-scrollbar-thumb:hover { background: #4a3a68; }
 
 /* ---- Reusable utilities ---- */
 @utility container-page {
@@ -109,7 +110,7 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(100deg, #e7ecf5 0%, #7dd3fc 45%, #818cf8 100%);
+  background: linear-gradient(100deg, #f4f1ff 0%, #c084fc 45%, #d946ef 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -126,7 +127,7 @@ body {
 
 /* Glass card */
 .glass {
-  background: linear-gradient(180deg, rgba(20, 24, 38, 0.7), rgba(15, 17, 25, 0.5));
+  background: linear-gradient(180deg, rgba(28, 22, 40, 0.7), rgba(21, 16, 31, 0.5));
   border: 1px solid var(--color-border);
   backdrop-filter: blur(12px);
 }
@@ -138,8 +139,8 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 20px 50px -20px rgba(56, 189, 248, 0.35);
+  border-color: rgba(168, 85, 247, 0.45);
+  box-shadow: 0 20px 50px -20px rgba(168, 85, 247, 0.45);
 }
 
 /* Grid background */

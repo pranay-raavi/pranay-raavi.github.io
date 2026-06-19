@@ -47,7 +47,7 @@ export function Hero() {
             {/* name */}
             <motion.h1
               {...fade(0.06)}
-              className="mt-6 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+              className="mt-6 text-5xl font-bold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-[5.25rem]"
             >
               <span className="text-gradient">{profile.name}</span>
             </motion.h1>

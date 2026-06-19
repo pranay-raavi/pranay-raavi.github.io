@@ -155,7 +155,7 @@ export const whatIBuild: BuildItem[] = [
       "Next.js + React frontends and FastAPI backends with real-time data flow and clean integrations.",
     icon: Code2,
     items: ["Next.js · React.js", "TypeScript · Tailwind", "FastAPI · REST APIs", "MongoDB · PostgreSQL"],
-    accent: "#38bdf8",
+    accent: "#c084fc",
   },
   {
     title: "License Management Systems",
@@ -163,7 +163,7 @@ export const whatIBuild: BuildItem[] = [
       "SaaS & On-Premise license workflows — onboarding, product keys, deployment validation and entitlement logic.",
     icon: KeyRound,
     items: ["Customer onboarding", "Product key assignment", "SaaS + On-Prem flows", "Environment-aware config"],
-    accent: "#818cf8",
+    accent: "#d946ef",
   },
   {
     title: "AI-Powered Applications",
@@ -171,7 +171,7 @@ export const whatIBuild: BuildItem[] = [
       "RAG pipelines and AI assistants integrated with knowledge bases and ticketing systems for contextual answers.",
     icon: Brain,
     items: ["RAG pipelines", "Semantic search", "Freshdesk KB integration", "Context-aware responses"],
-    accent: "#f472b6",
+    accent: "#ec4899",
   },
   {
     title: "Procurement Platforms",
@@ -179,7 +179,7 @@ export const whatIBuild: BuildItem[] = [
       "Backend services for RFP creation, bid management, PDF generation and AI-driven procurement automation.",
     icon: ShoppingCart,
     items: ["RFP automation", "Bid management", "PDF generation", "AI-generated RFPs"],
-    accent: "#22d3ee",
+    accent: "#a855f7",
   },
   {
     title: "Reusable UI Components",
@@ -187,7 +187,7 @@ export const whatIBuild: BuildItem[] = [
       "Component libraries, mock-data-driven interfaces and dashboards that scale across enterprise products.",
     icon: Layers,
     items: ["Design-system components", "Dashboard visualizations", "Workflow UIs", "Mock-data scaffolding"],
-    accent: "#34d399",
+    accent: "#a3e635",
   },
 ];
 
@@ -276,7 +276,7 @@ export const projects: Project[] = [
     tagline: "AI-powered customer-support workspace with a Freshdesk-grounded assistant and RAG-driven contextual answers.",
     categories: ["AI", "Frontend", "Backend", "Platform"],
     icon: Webhook,
-    accent: "#22d3ee",
+    accent: "#a855f7",
     problem:
       "Support agents juggle Freshdesk tickets, scattered knowledge base docs and disconnected internal tools. The goal: an enterprise workspace where an AI assistant reads ticket context, retrieves the right KB documents and produces grounded, agent-ready responses.",
     features: [
@@ -322,7 +322,7 @@ export const projects: Project[] = [
     tagline: "End-to-end License Management for an enterprise AI automation platform — SaaS & On-Premise deployments.",
     categories: ["Frontend", "Backend", "Platform"],
     icon: KeyRound,
-    accent: "#818cf8",
+    accent: "#d946ef",
     problem:
       "An enterprise AI automation platform needed a single license layer that worked for both SaaS tenants and On-Premise customers — covering onboarding, product key assignment, generation and deployment validation.",
     features: [
@@ -367,7 +367,7 @@ export const projects: Project[] = [
     tagline: "FastAPI backend powering RFP creation, bid management and AI-driven procurement automation.",
     categories: ["Backend", "AI", "Platform"],
     icon: ShoppingCart,
-    accent: "#38bdf8",
+    accent: "#c084fc",
     problem:
       "Procurement teams handle RFPs, vendor bids and document generation across disconnected tools. The goal: a backend platform that automates RFP creation, manages bids and uses AI to draft procurement documents.",
     features: [
@@ -413,7 +413,7 @@ export const projects: Project[] = [
     tagline: "Regression models predicting EV range and analyzing pollution metrics.",
     categories: ["AI", "Backend"],
     icon: LineChart,
-    accent: "#34d399",
+    accent: "#a3e635",
     problem:
       "EV range varies with weather, load and driving patterns. The goal: train regression models that predict realistic range and analyze related pollution metrics.",
     features: [
@@ -452,7 +452,7 @@ export const projects: Project[] = [
     tagline: "Cybersecurity detection using stacked ensemble machine learning.",
     categories: ["AI", "Backend"],
     icon: ShieldCheck,
-    accent: "#f472b6",
+    accent: "#ec4899",
     problem:
       "Rootkits hide malicious system behavior from traditional detection. The goal: classify malicious system behavior with higher accuracy using stacked ensembles.",
     features: [
@@ -529,11 +529,11 @@ export const architectureCards: ArchitectureCard[] = [
     icon: Code2,
     tags: ["Next.js", "React", "FastAPI", "MongoDB"],
     flow: [
-      { label: "User", sub: "browser", accent: "#38bdf8" },
-      { label: "Next.js", sub: "React frontend", accent: "#22d3ee" },
-      { label: "REST API", sub: "FastAPI", accent: "#6366f1" },
-      { label: "Services", sub: "business logic", accent: "#818cf8" },
-      { label: "MongoDB", sub: "data store", accent: "#34d399" },
+      { label: "User", sub: "browser", accent: "#c084fc" },
+      { label: "Next.js", sub: "React frontend", accent: "#a855f7" },
+      { label: "REST API", sub: "FastAPI", accent: "#9333ea" },
+      { label: "Services", sub: "business logic", accent: "#d946ef" },
+      { label: "MongoDB", sub: "data store", accent: "#a3e635" },
     ],
   },
   {
@@ -544,11 +544,11 @@ export const architectureCards: ArchitectureCard[] = [
     icon: KeyRound,
     tags: ["Onboarding", "Product Key", "Validation", "SaaS / On-Prem"],
     flow: [
-      { label: "Customer", sub: "onboarding", accent: "#38bdf8" },
-      { label: "License Service", sub: "issue + validate", accent: "#22d3ee" },
-      { label: "Product Key", sub: "assigned", accent: "#6366f1" },
-      { label: "Deployment", sub: "SaaS or On-Prem", accent: "#818cf8" },
-      { label: "AI Platform", sub: "activated", accent: "#34d399" },
+      { label: "Customer", sub: "onboarding", accent: "#c084fc" },
+      { label: "License Service", sub: "issue + validate", accent: "#a855f7" },
+      { label: "Product Key", sub: "assigned", accent: "#9333ea" },
+      { label: "Deployment", sub: "SaaS or On-Prem", accent: "#d946ef" },
+      { label: "AI Platform", sub: "activated", accent: "#a3e635" },
     ],
   },
   {
@@ -559,12 +559,12 @@ export const architectureCards: ArchitectureCard[] = [
     icon: Brain,
     tags: ["Freshdesk", "Embeddings", "Semantic Search", "LLM"],
     flow: [
-      { label: "Agent", sub: "query + ticket", accent: "#38bdf8" },
-      { label: "Backend", sub: "FastAPI", accent: "#22d3ee" },
-      { label: "Embeddings", sub: "vectorize", accent: "#6366f1" },
-      { label: "KB Retrieval", sub: "semantic search", accent: "#818cf8" },
-      { label: "LLM", sub: "grounded answer", accent: "#f472b6" },
-      { label: "Workspace UI", sub: "rendered", accent: "#34d399" },
+      { label: "Agent", sub: "query + ticket", accent: "#c084fc" },
+      { label: "Backend", sub: "FastAPI", accent: "#a855f7" },
+      { label: "Embeddings", sub: "vectorize", accent: "#9333ea" },
+      { label: "KB Retrieval", sub: "semantic search", accent: "#d946ef" },
+      { label: "LLM", sub: "grounded answer", accent: "#ec4899" },
+      { label: "Workspace UI", sub: "rendered", accent: "#a3e635" },
     ],
   },
   {
@@ -575,11 +575,11 @@ export const architectureCards: ArchitectureCard[] = [
     icon: ShoppingCart,
     tags: ["RFP", "Bids", "AI Drafting", "PDF"],
     flow: [
-      { label: "RFP Creation", sub: "frontend", accent: "#38bdf8" },
-      { label: "FastAPI", sub: "RFP service", accent: "#22d3ee" },
-      { label: "AI Generation", sub: "content draft", accent: "#6366f1" },
-      { label: "Bid Management", sub: "vendor workflow", accent: "#818cf8" },
-      { label: "PDF Export", sub: "document", accent: "#34d399" },
+      { label: "RFP Creation", sub: "frontend", accent: "#c084fc" },
+      { label: "FastAPI", sub: "RFP service", accent: "#a855f7" },
+      { label: "AI Generation", sub: "content draft", accent: "#9333ea" },
+      { label: "Bid Management", sub: "vendor workflow", accent: "#d946ef" },
+      { label: "PDF Export", sub: "document", accent: "#a3e635" },
     ],
   },
   {
@@ -590,9 +590,9 @@ export const architectureCards: ArchitectureCard[] = [
     icon: Network,
     tags: ["REST", "Postman", "Testing", "Integration"],
     flow: [
-      { label: "Frontend", sub: "React / Next.js", accent: "#38bdf8" },
-      { label: "REST API", sub: "contract", accent: "#6366f1" },
-      { label: "FastAPI", sub: "validation", accent: "#818cf8" },
+      { label: "Frontend", sub: "React / Next.js", accent: "#c084fc" },
+      { label: "REST API", sub: "contract", accent: "#9333ea" },
+      { label: "FastAPI", sub: "validation", accent: "#d946ef" },
       { label: "Postman", sub: "tested + documented", accent: "#fbbf24" },
     ],
   },
@@ -613,31 +613,31 @@ export const skillGroups: SkillGroup[] = [
   {
     domain: "Languages",
     icon: Code2,
-    accent: "#38bdf8",
+    accent: "#c084fc",
     skills: ["Python", "JavaScript", "TypeScript", "SQL"],
   },
   {
     domain: "Frontend",
     icon: Sparkles,
-    accent: "#22d3ee",
+    accent: "#a855f7",
     skills: ["Next.js", "React.js", "HTML", "CSS", "Tailwind"],
   },
   {
     domain: "Backend",
     icon: Server,
-    accent: "#818cf8",
+    accent: "#d946ef",
     skills: ["FastAPI", "Python", "REST APIs"],
   },
   {
     domain: "Databases",
     icon: Database,
-    accent: "#34d399",
+    accent: "#a3e635",
     skills: ["MongoDB", "PostgreSQL"],
   },
   {
     domain: "Generative AI",
     icon: Brain,
-    accent: "#f472b6",
+    accent: "#ec4899",
     skills: ["LLM Basics", "RAG Pipelines", "Semantic Search", "Context Retrieval"],
   },
   {

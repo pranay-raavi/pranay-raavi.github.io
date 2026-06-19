@@ -5,7 +5,6 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { Navbar } from "@/components/Navbar";
 import { CommandPalette } from "@/components/CommandPalette";
 import { Hero } from "@/components/Hero";
-import { TechMarquee } from "@/components/ui/TechMarquee";
 import { SystemStatus } from "@/components/SystemStatus";
 import { About } from "@/components/About";
 import { WhatIBuild } from "@/components/WhatIBuild";
@@ -30,7 +29,6 @@ export default function Home() {
 
       <main>
         <Hero />
-        <TechMarquee />
         <SystemStatus />
         <About />
         <WhatIBuild />

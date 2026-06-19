@@ -7,10 +7,10 @@ const ease = [0.21, 0.47, 0.32, 0.98] as const;
 
 /* ── RAG pipeline stages (animated dots flow between them) ── */
 const stages = [
-  { label: "Embed",    color: "#38bdf8" },
-  { label: "Retrieve", color: "#818cf8" },
-  { label: "Fuse",     color: "#a78bfa" },
-  { label: "Generate", color: "#34d399" },
+  { label: "Embed",    color: "#c084fc" },
+  { label: "Retrieve", color: "#a855f7" },
+  { label: "Fuse",     color: "#d946ef" },
+  { label: "Generate", color: "#a3e635" },
 ];
 
 /* ── Citation cards shown under the AI answer ── */
@@ -28,20 +28,20 @@ export function AIWorkspaceCard() {
       className="relative w-full max-w-[440px]"
     >
       {/* Ambient gradient glow behind the card */}
-      <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] bg-[radial-gradient(60%_60%_at_70%_30%,rgba(129,140,248,0.18),transparent_70%),radial-gradient(60%_60%_at_20%_80%,rgba(34,211,238,0.12),transparent_70%)] blur-2xl" />
+      <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] bg-[radial-gradient(60%_60%_at_70%_30%,rgba(168,85,247,0.30),transparent_70%),radial-gradient(60%_60%_at_20%_80%,rgba(217,70,239,0.20),transparent_70%)] blur-2xl" />
 
       <div className="glass relative overflow-hidden rounded-3xl shadow-glow">
         {/* ── Header ── */}
-        <div className="relative flex items-center justify-between border-b border-border bg-gradient-to-br from-[#0a1226]/80 via-[#0c0e22]/80 to-[#150f2a]/80 px-5 py-4">
+        <div className="relative flex items-center justify-between border-b border-border bg-gradient-to-br from-[#1a0f2e]/80 via-[#180b28]/80 to-[#2a1438]/80 px-5 py-4">
           <div className="flex items-center gap-3">
             <motion.div
               initial={{ scale: 0.85, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-accent/30 bg-gradient-to-br from-accent/20 to-violet-500/20"
+              className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-accent/40 bg-gradient-to-br from-accent/25 to-accent-2/25"
             >
               <Brain className="h-5 w-5 text-accent" />
-              <span className="absolute -inset-1 -z-10 rounded-2xl bg-accent/20 blur-md" />
+              <span className="absolute -inset-1 -z-10 rounded-2xl bg-accent/30 blur-md" />
             </motion.div>
             <div>
               <p className="text-sm font-semibold text-fg">AI Decision Workspace</p>
@@ -91,14 +91,14 @@ export function AIWorkspaceCard() {
           </p>
           <div className="relative grid grid-cols-4 gap-2">
             {/* connector line behind stages */}
-            <div className="absolute inset-x-2 top-[7px] h-px bg-gradient-to-r from-accent/40 via-violet-400/40 to-emerald/40" />
+            <div className="absolute inset-x-2 top-[7px] h-px bg-gradient-to-r from-accent/40 via-accent-2/40 to-emerald/50" />
 
             {/* flowing dot */}
             <motion.span
               initial={{ left: 0 }}
               animate={{ left: ["0%", "100%"] }}
               transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-              className="absolute top-[2px] h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_10px_2px_rgba(56,189,248,0.6)]"
+              className="absolute top-[2px] h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_12px_3px_rgba(168,85,247,0.7)]"
             />
 
             {stages.map((s, i) => (
@@ -128,7 +128,7 @@ export function AIWorkspaceCard() {
           transition={{ delay: 1.0, duration: 0.5 }}
           className="flex gap-3 px-5 py-4"
         >
-          <div className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-gradient-to-br from-accent/20 to-violet-500/20">
+          <div className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-gradient-to-br from-accent/25 to-accent-2/25">
             <Brain className="h-4 w-4 text-accent" />
           </div>
           <div className="flex-1">
@@ -139,7 +139,7 @@ export function AIWorkspaceCard() {
               </span>
             </div>
 
-            <div className="rounded-2xl rounded-tl-sm border border-accent/20 bg-gradient-to-br from-accent/5 to-violet-500/5 px-3 py-2.5">
+            <div className="rounded-2xl rounded-tl-sm border border-accent/25 bg-gradient-to-br from-accent/8 to-accent-2/8 px-3 py-2.5">
               <p className="text-sm leading-relaxed text-fg/90">
                 The customer&apos;s SaaS license has expired. Ask them to:
               </p>
@@ -177,7 +177,7 @@ export function AIWorkspaceCard() {
                         initial={{ width: 0 }}
                         animate={{ width: `${c.match}%` }}
                         transition={{ delay: 1.5 + i * 0.12, duration: 0.7, ease }}
-                        className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-accent to-violet-400"
+                        className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-accent to-accent-2"
                       />
                     </span>
                     <span className="font-mono text-[10px] text-accent">{c.match}%</span>
@@ -192,8 +192,8 @@ export function AIWorkspaceCard() {
         <div className="flex items-center gap-3 border-t border-border bg-[#070a14]/40 px-5 py-2.5">
           {[
             { icon: Brain,    label: "RAG",      color: "text-accent" },
-            { icon: Zap,      label: "FastAPI",  color: "text-violet-400" },
-            { icon: Sparkles, label: "Next.js",  color: "text-cyan-400" },
+            { icon: Zap,      label: "FastAPI",  color: "text-accent-2" },
+            { icon: Sparkles, label: "Next.js",  color: "text-emerald" },
           ].map(({ icon: Icon, label, color }) => (
             <span key={label} className="inline-flex items-center gap-1 text-[11px] text-faint">
               <Icon className={`h-3 w-3 ${color}`} />

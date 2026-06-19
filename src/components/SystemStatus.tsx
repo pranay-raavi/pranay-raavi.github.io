@@ -22,7 +22,7 @@ export function SystemStatus() {
             AI Engineer
           </span>
           <span className="hidden items-center gap-1.5 text-muted sm:inline-flex">
-            <Sparkles className="h-3 w-3 text-violet-400" />
+            <Sparkles className="h-3 w-3 text-accent-2" />
             RAG · Next.js · FastAPI
           </span>
 
