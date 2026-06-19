@@ -15,9 +15,9 @@ const stages = [
 
 /* ── Citation cards shown under the AI answer ── */
 const citations = [
-  { id: "KB-204", title: "Enterprise Onboarding · Playbook", match: 95 },
-  { id: "KB-117", title: "Customer Preparation Checklist", match: 82 },
-  { id: "TKT-1893", title: "Past ticket · onboarding timeline", match: 71 },
+  { id: "KB-312", title: "App Troubleshooting · Common Fixes", match: 96 },
+  { id: "KB-118", title: "Known Issues · FAQ", match: 84 },
+  { id: "TKT-2104", title: "Past ticket · similar resolved", match: 73 },
 ];
 
 export function AIWorkspaceCard() {
@@ -78,8 +78,8 @@ export function AIWorkspaceCard() {
               </span>
             </div>
             <p className="rounded-2xl rounded-tl-sm border border-border bg-surface/60 px-3 py-2 text-sm leading-relaxed text-muted">
-              Customer is asking how long our enterprise onboarding takes and
-              what they need to prepare. Can you check our internal docs?
+              Customer says their app is not working. Can you check the KB
+              and any past tickets for resolution steps?
             </p>
           </div>
         </motion.div>
@@ -142,16 +142,20 @@ export function AIWorkspaceCard() {
 
             <div className="rounded-2xl rounded-tl-sm border border-accent/25 bg-gradient-to-br from-accent/8 to-accent-2/8 px-3 py-2.5">
               <p className="text-sm leading-relaxed text-fg/90">
-                From our internal docs and a similar resolved ticket:
+                Resolution steps from the KB and a similar past ticket:
               </p>
               <ul className="mt-1.5 space-y-1 text-sm leading-relaxed text-muted">
                 <li className="flex items-start gap-1.5">
                   <ArrowRight className="mt-1 h-3 w-3 shrink-0 text-accent" />
-                  Standard onboarding completes in <span className="font-medium text-fg">5 working days</span>
+                  Clear cache and restart the app
                 </li>
                 <li className="flex items-start gap-1.5">
                   <ArrowRight className="mt-1 h-3 w-3 shrink-0 text-accent" />
-                  Customer prepares: <span className="font-medium text-fg">admin list, billing details, integration scope</span>
+                  Verify network connectivity and retry
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <ArrowRight className="mt-1 h-3 w-3 shrink-0 text-accent" />
+                  Check the service status dashboard
                 </li>
               </ul>
             </div>
