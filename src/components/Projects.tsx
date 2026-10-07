@@ -76,8 +76,8 @@ export function Projects() {
     <Section id="projects">
       <SectionHeading
         eyebrow="Featured Projects"
-        title="Systems I've shipped"
-        description="Production AI and platform work — architecture, trade-offs, and results."
+        title="Systems I've built"
+        description="Enterprise AI platform work and the machine-learning projects behind it."
       />
 
       {/* Filters */}
@@ -164,7 +164,7 @@ export function Projects() {
               <div className="relative mt-4 border-t border-border pt-4">
                 <ProjectActions project={p} />
                 <p className="mt-3 text-xs font-medium text-accent">
-                  Read engineering case study →
+                  View details →
                 </p>
               </div>
             </motion.article>
@@ -229,14 +229,16 @@ function ProjectModal({
             </div>
 
             <div className="space-y-7 p-7">
-              <Block label="Problem">
-                <p className="text-sm leading-relaxed text-muted">
-                  {project.problem}
-                </p>
-              </Block>
+              {project.problem && (
+                <Block label="Problem">
+                  <p className="text-sm leading-relaxed text-muted">
+                    {project.problem}
+                  </p>
+                </Block>
+              )}
 
-              <div className="grid gap-7 sm:grid-cols-2">
-                <Block label="Features">
+              <div className={`grid gap-7 ${project.architecture ? "sm:grid-cols-2" : ""}`}>
+                <Block label="What I built">
                   <ul className="space-y-1.5">
                     {project.features.map((f) => (
                       <li key={f} className="flex gap-2 text-sm text-muted">
@@ -246,43 +248,53 @@ function ProjectModal({
                     ))}
                   </ul>
                 </Block>
-                <Block label="Architecture">
+                {project.architecture && (
+                  <Block label="Architecture">
+                    <ul className="space-y-1.5">
+                      {project.architecture.map((a) => (
+                        <li key={a} className="flex gap-2 text-sm text-muted">
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-2" />
+                          {a}
+                        </li>
+                      ))}
+                    </ul>
+                  </Block>
+                )}
+              </div>
+
+              {(project.challenges || project.solution) && (
+                <div className="grid gap-7 sm:grid-cols-2">
+                  {project.challenges && (
+                    <Block label="Challenges">
+                      <p className="text-sm leading-relaxed text-muted">
+                        {project.challenges}
+                      </p>
+                    </Block>
+                  )}
+                  {project.solution && (
+                    <Block label="Solution">
+                      <p className="text-sm leading-relaxed text-muted">
+                        {project.solution}
+                      </p>
+                    </Block>
+                  )}
+                </div>
+              )}
+
+              {project.deployment && (
+                <Block label="Deployment Strategy">
                   <ul className="space-y-1.5">
-                    {project.architecture.map((a) => (
-                      <li key={a} className="flex gap-2 text-sm text-muted">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-2" />
-                        {a}
+                    {project.deployment.map((d) => (
+                      <li key={d} className="flex gap-2 text-sm text-muted">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" />
+                        {d}
                       </li>
                     ))}
                   </ul>
                 </Block>
-              </div>
+              )}
 
-              <div className="grid gap-7 sm:grid-cols-2">
-                <Block label="Challenges">
-                  <p className="text-sm leading-relaxed text-muted">
-                    {project.challenges}
-                  </p>
-                </Block>
-                <Block label="Solution">
-                  <p className="text-sm leading-relaxed text-muted">
-                    {project.solution}
-                  </p>
-                </Block>
-              </div>
-
-              <Block label="Deployment Strategy">
-                <ul className="space-y-1.5">
-                  {project.deployment.map((d) => (
-                    <li key={d} className="flex gap-2 text-sm text-muted">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </Block>
-
-              <Block label="Metrics">
+              <Block label="At a glance">
                 <div className="grid gap-3 sm:grid-cols-3">
                   {project.metrics.map((m) => (
                     <div
@@ -300,18 +312,20 @@ function ProjectModal({
                 </div>
               </Block>
 
-              <Block label="Results">
-                <div className="grid gap-3 sm:grid-cols-3">
-                  {project.results.map((r) => (
-                    <div
-                      key={r}
-                      className="rounded-xl border border-border bg-surface-2/50 p-3 text-sm text-muted"
-                    >
-                      {r}
-                    </div>
-                  ))}
-                </div>
-              </Block>
+              {project.results && (
+                <Block label="Results">
+                  <div className="grid gap-3 sm:grid-cols-3">
+                    {project.results.map((r) => (
+                      <div
+                        key={r}
+                        className="rounded-xl border border-border bg-surface-2/50 p-3 text-sm text-muted"
+                      >
+                        {r}
+                      </div>
+                    ))}
+                  </div>
+                </Block>
+              )}
 
               <Block label="Tech Stack">
                 <div className="flex flex-wrap gap-2">

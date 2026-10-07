@@ -12,7 +12,7 @@ export function EngineeringPrinciples() {
       <SectionHeading
         eyebrow="Engineering Principles"
         title="How I build"
-        description="The principles behind every AI feature and frontend I design and ship."
+        description="The principles behind the AI features and platform services I build."
       />
 
       <motion.div

@@ -44,7 +44,7 @@ export function Contact() {
         <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.18),transparent_65%)] blur-3xl" />
         <div className="bg-grid pointer-events-none absolute inset-0 opacity-30 [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000,transparent)]" />
 
-        <div className="relative grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
+        <div className="relative grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-accent">
               <span className="relative flex h-2 w-2">
@@ -58,9 +58,9 @@ export function Contact() {
               <span className="text-gradient-accent">reliable</span>.
             </h2>
             <p className="mt-4 max-w-md leading-relaxed text-muted">
-              Looking for a Software Developer who can ship full-stack
-              Next.js + FastAPI products and integrate AI into real
-              workflows? Let&apos;s talk.
+              Looking for an AI Engineer who can take LLM features from
+              prompt and retrieval design through FastAPI backends to
+              deployment? Let&apos;s talk.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">

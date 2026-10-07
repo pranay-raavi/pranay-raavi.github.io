@@ -20,7 +20,7 @@ export function Architecture() {
             How I architect <span className="text-gradient-accent">AI products</span>
           </>
         }
-        description="Interactive, animated diagrams of the data flows and AI pipelines behind every product I build."
+        description="Animated diagrams of the data flows and AI pipelines behind the systems I build."
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-[340px_1fr]">

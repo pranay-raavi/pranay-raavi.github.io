@@ -12,7 +12,7 @@ export function Experience() {
       <SectionHeading
         eyebrow="Experience"
         title="Career timeline"
-        description="Hands-on production experience and recognized achievements."
+        description="Work experience and education."
       />
 
       <div className="relative mx-auto mt-14 max-w-3xl">
@@ -63,14 +63,33 @@ export function Experience() {
                     {item.summary}
                   </p>
 
-                  <ul className="mt-4 space-y-2">
-                    {item.highlights.map((h) => (
-                      <li key={h} className="flex gap-2.5 text-sm text-muted">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent/80" />
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {item.highlights.length > 0 && (
+                    <ul className="mt-4 space-y-2">
+                      {item.highlights.map((h) => (
+                        <li key={h} className="flex gap-2.5 text-sm text-muted">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent/80" />
+                          <span>{h}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {item.groups?.map((g) => (
+                    <div key={g.title} className="mt-5 border-t border-border pt-4">
+                      <h4 className="text-sm font-semibold text-fg">{g.title}</h4>
+                      {g.stack && (
+                        <p className="mt-0.5 font-mono text-[11px] text-faint">{g.stack}</p>
+                      )}
+                      <ul className="mt-3 space-y-2">
+                        {g.highlights.map((h) => (
+                          <li key={h} className="flex gap-2.5 text-sm text-muted">
+                            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent/80" />
+                            <span>{h}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
 
                   <div className="mt-5 flex flex-wrap gap-2">
                     {item.tags.map((t) => (

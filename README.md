@@ -1,9 +1,9 @@
 # Raavi Pranay — Portfolio
 
-A premium, recruiter-focused engineering portfolio positioning Raavi Pranay as a
-**Software Developer** (Full-Stack Engineer with AI Applications as a supporting
-capability), highlighting enterprise SaaS and On-Premise systems shipped at
-Nainovate Technologies.
+A recruiter-focused engineering portfolio positioning Raavi Pranay as an
+**AI Engineer** (Generative AI, LLM applications, Python and FastAPI),
+highlighting the multi-tenant enterprise AI platform and RAG-based assistant
+built at Nainovate Technologies.
 
 Built with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind CSS v4**, and
 **Framer Motion**. Dark-theme-first, fully responsive, SEO-optimized, and
@@ -12,10 +12,10 @@ deployable to GitHub Pages / Vercel with no changes.
 ## Sections
 
 Hero (animated terminal + stats) · Tech marquee · About · Experience timeline ·
-Featured Projects (filterable, case-study modals — License Management, BuildX
-Procurement, AI Decision Workspace) · **Architecture Showcase** (interactive
-animated SVG diagrams: Full-Stack, License flow, RAG, Procurement, REST APIs) ·
-Skills · Achievements · Modern Engineering Workflow · Contact · Footer.
+Featured Projects (filterable, detail modals — GenX, AI Decision Workspace,
+Rootkit Detection, EV Range Prediction) · **Architecture Showcase** (animated
+SVG diagrams: Agent Runtime, RAG, MCP tool integration, Platform services,
+Scheduled AI workflows) · Skills · Achievements · How I Work · Contact · Footer.
 
 ## Develop
 

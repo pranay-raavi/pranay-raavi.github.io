@@ -15,8 +15,8 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-const title = `${profile.name} — Software Developer · AI Engineer`;
-const description = `${profile.name} — Software Developer building enterprise-grade SaaS and On-Premise systems with Next.js, React.js, FastAPI, MongoDB and REST APIs. Shipped License Management, BuildX Procurement and the AI Decision Workspace (RAG-powered customer support) @ Nainovate Technologies.`;
+const title = `${profile.name} — AI Engineer · Generative AI`;
+const description = `${profile.name} — AI Engineer building LLM systems for enterprise SaaS: a multi-tenant AI platform (agent runtime, document ingestion, MCP tool integration) and a RAG-based assistant, with Python, FastAPI and MongoDB @ Nainovate Technologies.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(profile.siteUrl),
@@ -31,20 +31,17 @@ export const metadata: Metadata = {
   keywords: [
     profile.name,
     "Raavi Pranay",
-    "Software Developer",
-    "Frontend Developer",
     "AI Engineer",
-    "Backend Engineer",
-    "AI Applications Engineer",
-    "Next.js",
-    "React.js",
+    "Generative AI",
+    "LLM Applications",
+    "Python",
     "FastAPI",
     "MongoDB",
-    "REST APIs",
     "RAG",
-    "License Management",
-    "BuildX",
-    "Freshdesk",
+    "AI Agents",
+    "MCP",
+    "LiteLLM",
+    "Semantic Search",
   ],
   alternates: { canonical: "/" },
   openGraph: {
@@ -80,25 +77,27 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: profile.name,
-  jobTitle: "Software Developer, Frontend Developer, AI Engineer",
+  jobTitle: "AI Engineer",
   description,
   url: profile.siteUrl,
   email: profile.email,
   worksFor: { "@type": "Organization", name: "Nainovate Technologies Pvt Ltd" },
   sameAs: [profile.socials.github, profile.socials.linkedin],
   knowsAbout: [
-    "Next.js",
-    "React.js",
-    "TypeScript",
-    "FastAPI",
     "Python",
+    "FastAPI",
     "MongoDB",
     "PostgreSQL",
-    "REST APIs",
-    "License Management",
+    "Redis",
     "Retrieval-Augmented Generation",
     "Semantic Search",
-    "AI Engineering",
+    "AI Agents",
+    "Tool Calling",
+    "Model Context Protocol",
+    "LiteLLM",
+    "Prompt Engineering",
+    "Next.js",
+    "TypeScript",
   ],
 };
 

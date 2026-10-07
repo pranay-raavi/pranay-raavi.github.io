@@ -30,25 +30,25 @@ export function About() {
           className="glass rounded-2xl p-7 lg:sticky lg:top-28"
         >
           <p className="text-lg leading-relaxed text-muted">
-            I&apos;m a{" "}
-            <span className="font-medium text-fg">Software Developer</span>{" "}
-            with 1+ year of industry experience building enterprise-grade SaaS
-            and On-Premise systems.
+            I&apos;m an{" "}
+            <span className="font-medium text-fg">AI Engineer</span>{" "}
+            with 1+ year of experience building LLM systems for enterprise
+            SaaS products.
           </p>
           <p className="mt-4 leading-relaxed text-muted">
-            My expertise spans{" "}
-            <span className="text-accent">Next.js, React.js, FastAPI and MongoDB</span>{" "}
-            — designing full-stack applications, REST APIs and AI-driven
-            workflow modules. I&apos;ve shipped license management,
-            procurement automation and RAG-powered customer-support
-            platforms for enterprise users.
+            I work mainly in{" "}
+            <span className="text-accent">Python, FastAPI and MongoDB</span>,
+            taking AI features from prompt and retrieval design through
+            backend APIs to deployment. I&apos;ve built backend services for
+            a multi-tenant enterprise AI platform and delivered a RAG-based
+            assistant grounded in support and knowledge-base data.
           </p>
 
           <div className="mt-7 grid grid-cols-3 gap-3 border-t border-border pt-6">
             {[
-              { k: "Primary", v: "Full-Stack" },
+              { k: "Focus", v: "GenAI / LLMs" },
               { k: "Backend", v: "FastAPI" },
-              { k: "Plus", v: "AI / RAG" },
+              { k: "Data", v: "MongoDB" },
             ].map((x) => (
               <div key={x.k}>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-faint">

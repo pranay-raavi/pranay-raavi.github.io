@@ -47,7 +47,7 @@ export function AIWorkspaceCard() {
             <div>
               <p className="text-sm font-semibold text-fg">AI Decision Workspace</p>
               <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-                RAG · Freshdesk · Live
+                RAG · Support KB · Live
               </p>
             </div>
           </div>
@@ -70,7 +70,7 @@ export function AIWorkspaceCard() {
           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border bg-surface text-muted">
             <User className="h-4 w-4" />
           </div>
-          <div className="flex-1">
+          <div className="min-w-0 flex-1">
             <div className="mb-1 flex items-center gap-2">
               <span className="text-xs font-medium text-fg">Support Agent</span>
               <span className="rounded border border-border bg-surface px-1.5 py-0.5 font-mono text-[10px] text-faint">
@@ -132,7 +132,7 @@ export function AIWorkspaceCard() {
           <div className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-gradient-to-br from-accent/25 to-accent-2/25">
             <Brain className="h-4 w-4 text-accent" />
           </div>
-          <div className="flex-1">
+          <div className="min-w-0 flex-1">
             <div className="mb-1 flex items-center gap-2">
               <span className="text-xs font-medium text-fg">AI Assistant</span>
               <span className="rounded border border-accent/30 bg-accent/10 px-1.5 py-0.5 font-mono text-[10px] text-accent">
@@ -198,7 +198,7 @@ export function AIWorkspaceCard() {
           {[
             { icon: Brain,    label: "RAG",      color: "text-accent" },
             { icon: Zap,      label: "FastAPI",  color: "text-accent-2" },
-            { icon: Sparkles, label: "Next.js",  color: "text-emerald" },
+            { icon: Sparkles, label: "MongoDB",  color: "text-emerald" },
           ].map(({ icon: Icon, label, color }) => (
             <span key={label} className="inline-flex items-center gap-1 text-[11px] text-faint">
               <Icon className={`h-3 w-3 ${color}`} />

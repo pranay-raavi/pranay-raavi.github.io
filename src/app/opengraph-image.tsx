@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Raavi Pranay — AI Engineer · Frontend Developer · Software Developer";
+export const alt = "Raavi Pranay — AI Engineer · Generative AI · LLM Applications";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const dynamic = "force-static";
@@ -71,11 +71,11 @@ export default function OgImage() {
           AI Engineer
         </div>
         <div style={{ marginTop: 6, fontSize: 28, fontWeight: 500, color: "#8593b0", display: "flex" }}>
-          Frontend Developer · Software Developer
+          Generative AI · LLM Applications
         </div>
 
         <div style={{ marginTop: 40, display: "flex", gap: 14, flexWrap: "wrap" }}>
-          {["Next.js", "React.js", "FastAPI", "MongoDB", "RAG", "Semantic Search"].map(
+          {["Python", "FastAPI", "MongoDB", "RAG", "AI Agents", "MCP"].map(
             (t) => (
               <div
                 key={t}

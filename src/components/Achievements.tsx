@@ -15,7 +15,7 @@ export function Achievements() {
       <SectionHeading
         eyebrow="Achievements"
         title="Proof of impact"
-        description="Recognition and milestones from building and operating real systems."
+        description="Milestones from work and education."
       />
 
       <motion.div
@@ -43,9 +43,6 @@ export function Achievements() {
             <p className="mt-3 leading-relaxed text-muted">
               {featured.description}
             </p>
-            <div className="mt-6 inline-flex items-center gap-2 rounded-xl border border-border bg-surface-2/50 px-4 py-2 font-mono text-sm text-accent">
-              TCS National Qualifier · Digital track
-            </div>
           </div>
         </motion.div>
 

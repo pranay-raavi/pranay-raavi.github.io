@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section id="home" className="relative flex min-h-screen items-center pt-28 pb-16">
       <div className="container-page">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="grid grid-cols-[minmax(0,1fr)] items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
           {/* Left */}
           <div>
             {/* company / availability */}

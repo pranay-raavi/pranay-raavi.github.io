@@ -16,7 +16,7 @@ export function WhatIBuild() {
             Systems that run in <span className="text-gradient-accent">production</span>
           </>
         }
-        description="From cloud infrastructure to backend platforms and the automation that ships them — with AI as a supporting capability."
+        description="LLM systems for enterprise SaaS — agent runtimes, retrieval pipelines, tool integrations and the backend services behind them."
       />
 
       <motion.div

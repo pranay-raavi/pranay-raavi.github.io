@@ -12,7 +12,7 @@ export function Skills() {
       <SectionHeading
         eyebrow="Skills"
         title="Engineering toolkit"
-        description="Grouped by domain — the technologies I use to design, build and ship full-stack AI products."
+        description="Grouped by domain — the technologies I use to design, build and ship LLM systems."
       />
 
       <motion.div

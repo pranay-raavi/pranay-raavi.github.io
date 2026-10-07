@@ -10,13 +10,13 @@ export function ModernWorkflow() {
   return (
     <Section id="workflow">
       <SectionHeading
-        eyebrow="Modern Engineering Workflow"
+        eyebrow="How I Work"
         title={
           <>
             Engineering with <span className="text-gradient-accent">leverage</span>
           </>
         }
-        description="A disciplined, automation-first approach that combines AI-assisted development with production engineering rigor."
+        description="The path every AI feature takes, start to finish."
       />
 
       <motion.div
@@ -53,8 +53,8 @@ export function ModernWorkflow() {
         transition={{ duration: 0.6 }}
         className="mx-auto mt-8 max-w-2xl text-center text-sm text-faint"
       >
-        Speed without shortcuts — every shipped feature still passes through
-        review, testing, monitoring, and infrastructure-as-code discipline.
+        Taking AI features from prompt and retrieval design through backend
+        APIs to deployment.
       </motion.p>
     </Section>
   );

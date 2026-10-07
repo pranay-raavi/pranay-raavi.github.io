@@ -45,7 +45,7 @@ export function CommandPalette() {
       { id: "about", label: "About", hint: "section", icon: User, run: () => go("#about") },
       { id: "build", label: "What I Build", hint: "section", icon: Layers, run: () => go("#what-i-build") },
       { id: "experience", label: "Experience", hint: "section", icon: Workflow, run: () => go("#experience") },
-      { id: "architecture", label: "Architecture", hint: "section", icon: Cpu, run: () => go("#architecture"), keywords: "fullstack license rag procurement api diagram" },
+      { id: "architecture", label: "Architecture", hint: "section", icon: Cpu, run: () => go("#architecture"), keywords: "agent rag mcp platform workflows diagram" },
       { id: "projects", label: "Projects", hint: "section", icon: Boxes, run: () => go("#projects") },
       { id: "skills", label: "Skills", hint: "section", icon: Layers, run: () => go("#skills") },
       { id: "gh", label: "GitHub", hint: profile.socials.github, icon: GitHubIcon, run: () => link(profile.socials.github), keywords: "code repo source" },

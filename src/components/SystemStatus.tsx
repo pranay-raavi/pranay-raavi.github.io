@@ -23,7 +23,7 @@ export function SystemStatus() {
           </span>
           <span className="hidden items-center gap-1.5 text-muted sm:inline-flex">
             <Sparkles className="h-3 w-3 text-accent-2" />
-            RAG · Next.js · FastAPI
+            RAG · FastAPI · MongoDB
           </span>
 
           {/* GitHub stats */}
