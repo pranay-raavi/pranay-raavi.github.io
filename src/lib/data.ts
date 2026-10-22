@@ -381,6 +381,38 @@ export const projects: Project[] = [
     ],
     status: { label: "Academic project", tone: "source" },
   },
+  {
+    slug: "rag-document-intelligence",
+    title: "Enterprise Document Intelligence — RAG Assistant",
+    tagline:
+      "End-to-end RAG pipeline over PDFs: grounded answers with page-level citations.",
+    categories: ["AI", "Backend"],
+    icon: Brain,
+    accent: "#8b5cf6",
+    features: [
+      "Full pipeline: PDF/DOCX ingestion, recursive chunking, MiniLM embeddings, Qdrant HNSW search, cross-encoder reranking, grounded LLM generation",
+      "Citations built from retrieval metadata (not LLM output) to prevent fabricated sources",
+      "Score-threshold fallback short-circuits LLM calls on weak retrieval, preventing hallucination",
+      "FastAPI backend (/documents/upload, /chat, /documents) with thin Streamlit UI client",
+    ],
+    stack: [
+      "Python",
+      "FastAPI",
+      "Streamlit",
+      "Qdrant",
+      "sentence-transformers",
+      "PyMuPDF",
+      "Pydantic",
+      "Docker",
+    ],
+    metrics: [
+      { label: "Year", value: "2026" },
+      { label: "Pattern", value: "RAG + Rerank" },
+      { label: "Vector DB", value: "Qdrant HNSW" },
+    ],
+    status: { label: "Open source", tone: "source" },
+    repo: "https://github.com/pranay-raavi/rag-document-intelligence",
+  },
 ];
 
 export const projectFilters: (ProjectCategory | "All")[] = [
